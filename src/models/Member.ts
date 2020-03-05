@@ -10,6 +10,11 @@ export class Member {
     dateOfExpiry: Date;
     picture: string;
     phoneNumber: string;
+    salary: number;
+    gen_salary: string;
+    working_hours: string;
+    social_security: null;
+    trial: null;
     
 }
 
@@ -27,7 +32,11 @@ export const MemberLst: Member[] =
             dateOfExpiry: null,
             picture: "../../assets/imgs/man.png",
             phoneNumber: "0837325693",
-            
+            salary: null,
+            gen_salary: null,
+            working_hours: null,
+            social_security: null,
+            trial: null,
         },
         {
             _id: "0002",
@@ -41,6 +50,10 @@ export const MemberLst: Member[] =
             dateOfExpiry: null,
             picture: "../../assets/imgs/man.png",
             phoneNumber: "0854579229",
-            
+            salary: null,
+            gen_salary: null,
+            working_hours: null,
+            social_security: null,
+            trial: null,
         },
     ]
