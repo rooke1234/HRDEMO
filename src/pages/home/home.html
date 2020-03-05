@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>โปรแกรมฝ่ายบุคคล</ion-title>
+  </ion-navbar>
+  <ion-card text-center >
+  <ion-col col-3><button ion-button round (click)="presentModalAddMember()"><ion-icon name="person-add"></ion-icon>เพิ่มพนักงาน</button></ion-col>
+  <ion-col col-3><button ion-button round (click)="presentModalCreatmembercard()"><ion-icon name="contact"> </ion-icon>บัตรประจำตัวพนักงาน</button></ion-col>
+  <ion-col col-3><button ion-button round (click)="presentModalFingerprint()"><ion-icon name="finger-print"> </ion-icon>พิมพ์ลายนิ้วมือ</button></ion-col>
+  <ion-col col-3><button ion-button round ><ion-icon name="cash"></ion-icon>สรุปเงินเดือน</button></ion-col>
+</ion-card>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row text-center align-items-center>
+      <ion-col col-2></ion-col>
+      <ion-col col-5>
+        <ion-searchbar (ionInput)="searching($event)"></ion-searchbar>
+      </ion-col>
+      <ion-col col-3>
+        <ion-item>
+          <ion-label>แผนก</ion-label>
+          <ion-select [(ngModel)]="department">
+            <ion-option list="cook">ห้องครัว</ion-option>
+            <ion-option list="res">ห้องอาหาร</ion-option>
+            <ion-option list="ibar">IBar</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card>
+    <ion-card-content>
+      <ion-row text-center>
+        <ion-col col-1>
+          ไอดี
+        </ion-col>
+        <ion-col col-2>
+          ชื่อ - สกุล
+        </ion-col>
+        <ion-col col-2>
+          แผนก
+        </ion-col>
+        <ion-col col-1>
+          สาย
+        </ion-col>
+        <ion-col col-1>
+          ลา
+        </ion-col>
+        <ion-col col-1>
+          มา
+        </ion-col>
+        <ion-col col-1>
+          ขาด
+        </ion-col>
+        <ion-col col-1>
+          OT
+        </ion-col>
+        <ion-col col-1>
+          กลับก่อน
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-grid>
+    <ion-list>
+      <ion-item *ngFor="let member of members">
+        <ion-row text-center align-items-center>
+          <ion-col col-1>
+            {{ member._id }}
+          </ion-col>
+          <ion-col col-2>
+            {{ member.tHName }}
+          </ion-col>
+          <ion-col col-2>
+            {{ member.department }}
+          </ion-col>
+          <ion-col col-1>
+            {{ member.late }}
+          </ion-col>
+          <ion-col col-1>
+            {{ member.leave }}
+          </ion-col>
+          <ion-col col-1>
+            {{ member.come }}
+          </ion-col>
+          <ion-col col-1>
+            {{ member.off }}
+          </ion-col>
+          <ion-col col-1>
+            {{ member.ot }}
+          </ion-col>
+          <ion-col col-1>
+            {{ member.lbefore }}
+          </ion-col>
+          <ion-col>
+            <button ion-button block color="light" (click)="presentModalEditMember(member)">แก้ไข</button>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+
+  
+
+
+ <!-- <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button> -->
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "HR",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
