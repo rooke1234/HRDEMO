@@ -68,8 +68,8 @@
 
 
   <ion-grid>
-    <ion-list >
-      <ion-item *ngFor="let member of members">
+    <ion-list>
+      <ion-item *ngFor="let member of members" (click)="presentModalAddMember()">
         <ion-row text-center align-items-center>
           <ion-col col-1>
             {{ member._id }}
