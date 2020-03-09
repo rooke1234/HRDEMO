@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Button } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { AlertController } from 'ionic-angular';
+import { Member, MemberLst } from '../../models/Member';
 
 /**
  * Generated class for the ActionPage page.
@@ -19,10 +20,14 @@ export class ActionPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
+  public members: Member[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl : AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl : AlertController, public modalCtrl: ModalController) {
+
+    
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+    this.getMembers(); 
 
     // Let's populate this page with some filler content for funzies
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
@@ -37,6 +42,25 @@ export class ActionPage {
       });
     }
   }
+  getMembers() {
+    this.members = MemberLst.sort((a, b) => (Number)(b._id) - (Number)(a._id));
+  }
+  searching(ev: any) {
+    this.getMembers();
+    const val = ev.target.value;
+    if (val && val.trim() != '') {
+      this.members = this.members.filter((item) => {
+        return this.haveAnyWord(item.tHName, val) ||
+          this.haveAnyWord(item.department, val) ||
+          this.haveAnyWord(item.phoneNumber, val);
+      })
+    }
+  }
+
+  haveAnyWord(item: any, word: any): boolean {
+    return item.toLowerCase().indexOf(word.toLowerCase()) > -1;
+  }
+
   showRadio() {
     let alert = this.alertCtrl.create();
     alert.setTitle('Lightsaber color');
@@ -91,6 +115,18 @@ export class ActionPage {
       ]
       });
     alert.present();
+  }
+
+  Addaction() {
+    var count = this.members.length + 1;
+    const modal = this.modalCtrl.create("DisearchactionPage", { _id: "000" + count });
+    modal.onDidDismiss(data => {
+      if (data) {
+        let member = data.value;
+        this.members.unshift(member);
+      }
+    });
+    modal.present(); 
   }
 
 }
