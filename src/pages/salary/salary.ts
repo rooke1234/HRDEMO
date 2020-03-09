@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { Member, MemberLst } from '../../models/Member';
 
 /**
  * Generated class for the SalaryPage page.
@@ -15,7 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SalaryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public members: Member[];
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+    this.getMembers(); 
+  }
+  getMembers() {
+    this.members = MemberLst.sort((a, b) => (Number)(b._id) - (Number)(a._id));
   }
 
   ionViewDidLoad() {
