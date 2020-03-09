@@ -13,6 +13,8 @@ import { FinancePage } from '../pages/finance/finance';
 import { ActionPage } from '../pages/action/action';
 import { FormPage } from '../pages/form/form';
 import { PersoninfoPage } from '../pages/personinfo/personinfo';
+import { SalaryPage } from '../pages/salary/salary';
+import { AddmemberPage } from '../pages/addmember/addmember';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { PersoninfoPage } from '../pages/personinfo/personinfo';
     ActionPage,
     FormPage,
     PersoninfoPage
+    SalaryPage,
+    AddmemberPage,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,8 @@ import { PersoninfoPage } from '../pages/personinfo/personinfo';
     ActionPage,
     FormPage,
     PersoninfoPage
+    SalaryPage,
+    AddmemberPage,
   ],
   providers: [
     StatusBar,

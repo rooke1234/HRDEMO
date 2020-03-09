@@ -86,5 +86,9 @@ export class ListPage {
       });
     alert.present();
   }
+
+  Addaction(){
+    
+  }
 }
 

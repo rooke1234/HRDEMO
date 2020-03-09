@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Member, MemberLst } from '../../models/Member';
+<<<<<<< HEAD
 import { PersoninfoPage } from '../personinfo/personinfo';
+=======
+import { SalaryPage } from '../salary/salary';
+import { AddmemberPage } from '../addmember/addmember';
+>>>>>>> 81629bcea82aa5f5ccae92339f748ac1b35c3809
 
 
 @Component({
@@ -34,16 +39,17 @@ export class HomePage {
   }
 
 
-  presentModalAddMember() {
-    var count = this.members.length + 1;
-    const modal = this.modalCtrl.create("AddmemberPage", { _id: "000" + count });
-    modal.onDidDismiss(data => {
-      if (data) {
-        let member = data.value;
-        this.members.unshift(member);
-      }
-    });
-    modal.present(); 
+  presentModalAddMember(member: Member) {
+    // var count = this.members.length + 1;
+    // const modal = this.modalCtrl.create("AddmemberPage", { _id: "000" + count });
+    // modal.onDidDismiss(data => {
+    //   if (data) {
+    //     let member = data.value;
+    //     this.members.unshift(member);
+    //   }
+    // });
+    // modal.present(); 
+    this.navCtrl.push(AddmemberPage);
   }
 
   presentModalEditMember(member: Member) {
@@ -86,6 +92,18 @@ export class HomePage {
   // membercard(){
   //   this.navCtrl.push(MembercardPage);
   // }
+  presentSalary(member: Member){
+    // const modal = this.modalCtrl.create("SalaryPage", {member: member });
+    // modal.onDidDismiss(data => {
+    //   if (data) {
+    //     let member = data.value;
+    //     var index = this.members.findIndex(it => it._id == member._id);
+    //     this.members[index] = member;
+    //   }
+    // });
+    // modal.present();
+    this.navCtrl.push(SalaryPage);
+  }
 
 
   GoToPersonPage(){

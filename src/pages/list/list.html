@@ -15,7 +15,38 @@
 
 
 <ion-content>
-  
+  <ion-card>
+    <ion-card-content>
+      <ion-row text-center>
+        <ion-col col-3>
+          ชื่อเวลางาน
+        </ion-col>
+        <ion-col col-3>
+          เวลา
+        </ion-col>
+        <ion-col col-3>
+          จำนวนคน
+        </ion-col>
+         </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-list>
+      <ion-item *ngFor="let member of members">
+        <ion-row text-center align-items-center>
+          <ion-col col-2>
+            {{ member.tHName }}
+          </ion-col>
+          <ion-col col-2>
+            {{ member.department }}
+          </ion-col>
+          
+          
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
   
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">

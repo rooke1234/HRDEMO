@@ -11,7 +11,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title text-center>Action</ion-title>
-    <button ion-button color="secondary" (click)="Addtime()">
+    <button ion-button color="secondary" (click)="Addaction()">
       <ion-icon name="md-add">เพิ่มข้อมูล</ion-icon></button>
   </ion-navbar>
 </ion-row>
@@ -48,4 +48,21 @@
       </ion-row>
     </ion-card-content>
   </ion-card>
+
+  <ion-grid>
+    <ion-list>
+      <ion-item *ngFor="let member of members">
+        <ion-row text-center align-items-center>
+          <ion-col col-1>
+            {{ member.tHName }}
+          </ion-col>
+          <ion-col col-3>
+            {{ member.department }}
+          </ion-col>
+          
+          
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
 </ion-content>

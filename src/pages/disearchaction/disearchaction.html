@@ -1,0 +1,63 @@
+<!--
+  Generated template for the DisearchactionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ค้นหาพนักงาน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row text-center align-items-center>
+      
+      <ion-col col-7>
+        <ion-searchbar (ionInput)="searching($event)"></ion-searchbar>
+      </ion-col>
+      <ion-col col-5>
+        <ion-item>
+          <ion-label>แผนก</ion-label>
+          <ion-select [(ngModel)]="department">
+            <ion-option list="cook">ห้องครัว</ion-option>
+            <ion-option list="res">ห้องอาหาร</ion-option>
+            <ion-option list="ibar">IBar</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-row text-center>
+        <ion-col col-5>
+          ชื่อ - สกุล
+        </ion-col>
+        <ion-col col-7>
+          แผนก
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-list>
+      <ion-item *ngFor="let member of members" (click)="addaction()">
+        <ion-row text-center align-items-center>
+          <ion-col col-5>
+            {{ member.tHName }}
+          </ion-col>
+          <ion-col col-7>
+            {{ member.department }}
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+ 
+
+</ion-content>

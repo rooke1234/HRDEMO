@@ -11,6 +11,14 @@
         <ion-col col-3><button ion-button round (click)="presentModalFingerprint()"><ion-icon name="finger-print"> </ion-icon>พิมพ์ลายนิ้วมือ</button></ion-col>
         <ion-col col-3><button ion-button round><ion-icon name="cash"></ion-icon>สรุปเงินเดือน</button></ion-col>
     </ion-card>
+    <ion-title>โปรแกรมฝ่ายบุคคล</ion-title>
+    </ion-navbar>
+    <ion-card text-center>
+        <ion-col col-3><button ion-button round (click)="presentModalAddMember()"><ion-icon name="person-add"></ion-icon>เพิ่มพนักงาน</button></ion-col>
+        <!-- <ion-col col-3><button ion-button round (click)="presentModalCreatmembercard()"><ion-icon name="contact"> </ion-icon>บัตรประจำตัวพนักงาน</button></ion-col>
+  <ion-col col-3><button ion-button round (click)="presentModalFingerprint()"><ion-icon name="finger-print"> </ion-icon>พิมพ์ลายนิ้วมือ</button></ion-col> -->
+        <ion-col col-3><button ion-button round (click)="presentSalary()"><ion-icon name="cash"></ion-icon>สรุปเงินเดือน</button></ion-col>
+    </ion-card>
 </ion-header>
 
 <ion-content padding>
