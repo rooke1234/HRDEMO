@@ -25,7 +25,7 @@ import { AddmemberPage } from '../pages/addmember/addmember';
     FinancePage,
     ActionPage,
     FormPage,
-    PersoninfoPage
+    PersoninfoPage,
     SalaryPage,
     AddmemberPage,
   ],
@@ -42,7 +42,7 @@ import { AddmemberPage } from '../pages/addmember/addmember';
     FinancePage,
     ActionPage,
     FormPage,
-    PersoninfoPage
+    PersoninfoPage,
     SalaryPage,
     AddmemberPage,
   ],

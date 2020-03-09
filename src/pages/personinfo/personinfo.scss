@@ -58,6 +58,7 @@ page-personinfo {
         }
     }
     #working-table {
+        padding-bottom: 50px;
         h2 {
             font-weight: bold;
         }
@@ -67,6 +68,7 @@ page-personinfo {
         }
         span {
             font-weight: lighter;
+            color: red;
         }
     }
 }
