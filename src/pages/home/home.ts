@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Member, MemberLst } from '../../models/Member';
+import { PersoninfoPage } from '../personinfo/personinfo';
 
 
 @Component({
@@ -85,5 +86,10 @@ export class HomePage {
   // membercard(){
   //   this.navCtrl.push(MembercardPage);
   // }
+
+
+  GoToPersonPage(){
+    this.navCtrl.push(PersoninfoPage);
+  }
 
 }

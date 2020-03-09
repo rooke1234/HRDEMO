@@ -10,6 +10,7 @@ import { FinancePage } from '../pages/finance/finance';
 import { Action } from 'rxjs/scheduler/Action';
 import { ActionPage } from '../pages/action/action';
 import { FormPage } from '../pages/form/form';
+import { PersoninfoPage } from '../pages/personinfo/personinfo';
 
 
 @Component({

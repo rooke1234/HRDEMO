@@ -1,0 +1,117 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>เพิ่มพนักงาน</ion-title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="container">
+        <section id="user-contact-info">
+            <div class="user-info">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="img-upload  mx-auto ">
+                            <img src="{{FormItem.get('picture').value}}">
+                            <button class="btn btn-danger">upload</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="user-info d-flex flex-column">
+                            <div class="name">
+                                <h2>ชื่อ-นามสกุล</h2>
+                                <div class="d-flex working-info">
+                                    <label for="">ชื่อ Mr.Bob</label>
+                                    <label for="">นามสกุล Sally</label>
+                                </div>
+                            </div>
+
+                            <div class="contact">
+                                <h2>ที่อยู่</h2>
+                                <label for="">บ้านเลขที่  97/1</label>
+                                <label for="">หมู่ <span>ม.4</span> </label>
+                                <label for=""> ตำบล <span>ศิลา</span> </label>
+                                <label for=""> อำเภอ <span>เมือง</span> </label>
+                                <label for=""> <span>ขอนแก่น</span></label>
+                                <label for=""> <span>4000</span></label>
+                            </div>
+                            <div class="working-info ">
+                                <div>
+                                    <h2>ข้อมูลการทำงาน</h2>
+                                </div>
+                                <div>
+                                    <label>แผนก:<span>standing</span> </label>
+                                </div>
+                                <div>
+                                    <label>หน้าที่:<span>บาร์น้ำ</span></label>
+                                </div>
+                                <div>
+                                    <label>เงินเดือน:<span>2000</span></label>
+                                </div>
+                                <div>
+                                    <label>เวลา:<span> 16.00-08.00 น.</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-group ">
+                            <button class="btn btn-primary btn-lg">ทำบัตร</button>
+                            <button class="btn btn-danger btn-lg">วันหยุด</button>
+                            <button class="btn btn-secondary btn-lg">ลายนิ้วมือ</button>
+                            <button class="btn btn-warning btn-lg">สแกนใบหน้า</button>
+                            <button class="btn btn-dark btn-lg">ลาออก</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="working-table">
+            <h2>สรูปการทำงาน</h2>.
+            <div class="working-total d-flex  justify-content-around">
+                <label for="">สาย <span>9</span>  ครั้ง</label>
+                <label for="">ลา <span>9</span>  ครั้ง</label>
+                <label for="">มา <span>9</span>  ครั้ง</label>
+                <label for="">ขาด <span>9</span>  ครั้ง</label>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">งานล่าสุด</th>
+                        <th scope="col">หมายเหตุ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Action</td>
+                        <td>มาสาย</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Action</td>
+                        <td>มาสาย</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Action</td>
+                        <td>มาสาย</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Action</td>
+                        <td>มาสาย</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Action</td>
+                        <td>มาสาย</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+</ion-content>

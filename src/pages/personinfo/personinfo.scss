@@ -1,0 +1,72 @@
+page-personinfo {
+    label {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #user-contact-info {
+        margin: 20px 0;
+        padding-bottom: 30px;
+        border-bottom: 2px solid rgb(160, 156, 156);
+    }
+    .img-upload {
+        text-align: center;
+        margin: 0 auto;
+        img {
+            width: 80%;
+        }
+        button {
+            width: 150px;
+            margin: 10px;
+        }
+    }
+    .user-info {
+        .name {
+            margin-bottom: 10px;
+            h2 {
+                margin-bottom: 5px;
+            }
+            label {
+                margin-right: 10px;
+            }
+        }
+        .contact {
+            margin-bottom: 10px;
+            h2 {
+                margin-bottom: 5px;
+            }
+        }
+        .working-info {
+            margin-bottom: 10px;
+            h2 {
+                margin-bottom: 5px;
+            }
+            label {
+                font-weight: bold;
+            }
+            span {
+                font-weight: lighter;
+            }
+        }
+        .button-group {
+            button {
+                padding: 5px 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+    #working-table {
+        h2 {
+            font-weight: bold;
+        }
+        .working-total {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        span {
+            font-weight: lighter;
+        }
+    }
+}
