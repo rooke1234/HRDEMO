@@ -13,6 +13,7 @@ import { FormPage } from '../pages/form/form';
 import { PersoninfoPage } from '../pages/personinfo/personinfo';
 import { AddmemberPage } from '../pages/addmember/addmember';
 import { WorktablePage } from '../pages/worktable/worktable';
+import { AddactionPage } from '../pages/addaction/addaction';
 
 
 @Component({
