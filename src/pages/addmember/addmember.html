@@ -111,12 +111,6 @@
                         </ion-item>
                     </div>
                 </div>
-
-
-                <!-- <ion-item>
-<ion-label>วันบัตรหมดอายุ</ion-label>
-<ion-input type="text" formControlName="dateOfExpiry"></ion-input>
-</ion-item> -->
             </div>
             <div class="button-group">
                 <button type="button" class="btn btn-danger btn-lg" (click)="closeDialog()"><i class="fas fa-times"></i>ยกเลิก</button>
@@ -124,18 +118,4 @@
             </div>
         </form>
     </div>
-
-    <ion-grid padding-top>
-        <ion-row>
-            <ion-col col-6>
-            </ion-col>
-            <ion-col>
-                <button ion-button block type="button" color="light" (click)="closeDialog()">ยกเลิก</button>
-            </ion-col>
-            <ion-col>
-                <button ion-button block type="submit" color="primary" [disabled]="this.FormItem.invalid">บันทึก</button>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    </form>
 </ion-content>
