@@ -11,66 +11,21 @@
 </ion-header>
 
 <ion-content padding>
+  <br>
   <ion-grid>
     <ion-row text-center align-items-center>
       
-      <ion-col col-7>
-        <ion-searchbar (ionInput)="searching($event)"></ion-searchbar>
+       <ion-col col-5 push-md-3>
+        <img src="../../assets/imgs/finger2.png" style="height: 200px;width: 250px" />
       </ion-col>
-      <ion-col col-5>
-        <ion-item>
-          <ion-label>แผนก</ion-label>
-          <ion-select [(ngModel)]="department">
-            <ion-option list="cook">ห้องครัว</ion-option>
-            <ion-option list="res">ห้องอาหาร</ion-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
+      
+     
     </ion-row>
+    <br>
+    <button ion-button  color="secondary" (click)="Confirmfingerprint()">สแกนลายนิ้วมือ</button>
   </ion-grid>
-  <ion-card>
-    <ion-card-content>
-      <ion-row text-center>
-        <ion-col col-1>
-          ไอดี
-        </ion-col>
-        <ion-col col-3>
-          ชื่อ - สกุล
-        </ion-col>
-        <ion-col col-3>
-          แผนก
-        </ion-col>
-        <ion-col col-3>
-          ตำแหน่ง
-        </ion-col>
-        
-      </ion-row>
-    </ion-card-content>
-  </ion-card>
+ 
 
 
-  <ion-grid>
-    <ion-list>
-      <ion-item *ngFor="let member of members">
-        <ion-row text-center align-items-center>
-          <ion-col col-1>
-            {{ member._id }}
-          </ion-col>
-          <ion-col col-3>
-            {{ member.tHName }}
-          </ion-col>
-          <ion-col col-3>
-            {{ member.department }}
-          </ion-col>
-          <ion-col col-3>
-            {{ member.function}}
-          </ion-col>
-          <ion-col>
-            <button ion-button block color="secondary" (click)="printcard(member)">สแกน</button>
-          </ion-col>
-        </ion-row>
-      </ion-item>
-    </ion-list>
-  </ion-grid>
 
 </ion-content>

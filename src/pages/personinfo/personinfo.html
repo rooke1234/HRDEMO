@@ -19,8 +19,8 @@
                             <div class="name">
                                 <h2>ชื่อ-นามสกุล</h2>
                                 <div class="d-flex working-info">
-                                    <label for="">ชื่อ Mr.Bob</label>
-                                    <label for="">นามสกุล Sally</label>
+                                    <label for="">ชื่อ นายกฤษณะ</label>
+                                    <label for="">นามสกุล ตระกูลพรหม</label>
                                 </div>
                             </div>
                             <div class="contact">
@@ -51,11 +51,11 @@
                             </div>
                         </div>
                         <div class=" button-group">
-                            <button class="btn btn-primary btn-lg">ทำบัตร</button>
-                            <button class="btn btn-danger btn-lg">วันหยุด</button>
-                            <button class="btn btn-secondary btn-lg">ลายนิ้วมือ</button>
+                            <button class="btn btn-primary btn-lg" (click)="presentModalprintcard()">ทำบัตร</button>
+                            <button class="btn btn-danger btn-lg" (click)="empdayoff()">วันหยุด</button>
+                            <button class="btn btn-secondary btn-lg"  (click)="presentModalfingerprint()">ลายนิ้วมือ</button>
                             <button class="btn btn-warning btn-lg">สแกนใบหน้า</button>
-                            <button class="btn btn-dark btn-lg">ลาออก</button>
+                            <button class="btn btn-dark btn-lg" (click)="Alerttakeoff()">ลาออก</button>
 
                         </div>
                     </div>
