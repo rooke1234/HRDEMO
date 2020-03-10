@@ -1,115 +1,141 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>เพิ่มพนักงาน</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>เพิ่มพนักงาน</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="FormItem" (ngSubmit)="okDialog()">
-    <ion-grid>
-      <ion-row>
-        <ion-col col-2>
-          <img src="{{FormItem.get('picture').value}}">
-        </ion-col>
-        <ion-col>
-          <ion-item [class.invalid]="isValid('tHName')">
-            <ion-label>ชื่อ-สกุล</ion-label>
-            <ion-input type="text" formControlName="tHName"></ion-input>
-          </ion-item>
-          <ion-item [class.invalid]="isValid('idNumber')">
-            <ion-label>รหัสบัตรประจำตัวประชาชน</ion-label>
-            <ion-input type="text" formControlName="idNumber">
-            </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>เกิดวันที่</ion-label>
-            <ion-datetime type="Date" formControlName="dateOfBirth"></ion-datetime>
-          </ion-item>
-          <ion-item [class.invalid]="isValid('address')">
-            <ion-label>ที่อยู่</ion-label>
-            <ion-input type="text" formControlName="address"></ion-input>
-          </ion-item>
-          <ion-item [class.invalid]="isValid('phoneNumber')">
-            <ion-label>เบอร์โทรศัพท์</ion-label>
-            <ion-input type="text" formControlName="phoneNumber"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>การศึกษา</ion-label>
-            <ion-select type="text" formControlName="education">
-              <ion-option value="noedu">ไม่จบการศึกษา</ion-option>
-              <ion-option value="primary">ประถมศึกษา</ion-option>
-              <ion-option value="Junior">มัธยมศึกษาตอนต้น</ion-option>
-              <ion-option value="Senior">มัธยมศึกษาตอนปลาย</ion-option>
-              <ion-option value="Vocational">ปวช</ion-option>
-              <ion-option value="Diploma">ปวส</ion-option>
-              <ion-option value="Bachelor">ปริญญาตรี</ion-option>
-              <ion-option value="Master">ปริญญาโท</ion-option>
-              <ion-option value="Doctor">ปริญญาเอก</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item [class.invalid]="isValid('department')">
-            <ion-label>แผนก</ion-label>
-            <ion-select type="text" formControlName="department">
-              <ion-option value="cook">ห้องครัว</ion-option>
-              <ion-option value="res">ห้องอาหาร</ion-option>
-              <ion-option value="front">ฟร้อน</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item [class.invalid]="isValid('function')">
-            <ion-label>ตำแหน่ง</ion-label>
-            <ion-select type="text" formControlName="function">
-              <ion-option value="cash">แคชเชียร์</ion-option>
-              <ion-option value="bar">บาร์น้ำ</ion-option>
-              <ion-option value="front">ฟร้อน</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item [class.invalid]="isValid('gen_salary')">
-            <ion-label>การจ่ายเงินเดือน</ion-label>
-            <ion-select type="text" formControlName="gen_salary">
-              <ion-option value="month">รายเดือน</ion-option>
-              <ion-option value="day">รายวัน</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item [class.invalid]="isValid('salary')">
-            <ion-label>เงินเดือน</ion-label>
-            <ion-input type="text" formControlName="salary"></ion-input>
-         </ion-item>
-         <ion-item [class.invalid]="isValid('working_hours')">
-          <ion-label>เวลาทำงาน</ion-label>
-          <ion-select type="text" formControlName="working_hours">
-            <ion-option value="morning">07.00 น. - 15.00 น.</ion-option>
-            <ion-option value="afternoon">15.00 น. - 23.00 น.</ion-option>
-            <ion-option value="night">23.00 น. - 07.00 น.</ion-option>
-          </ion-select>
-        </ion-item>
-       <ion-item [class.invalid]="isValid('social_security')"> 
-        <ion-label>ประกันสังคม</ion-label>
-        <ion-checkbox color="dark" checked="false" value="social_security"></ion-checkbox>
-      </ion-item>
-      <ion-item [class.invalid]="isValid('trial')"> 
-        <ion-label>ทดลองงาน</ion-label>
-        <ion-checkbox color="dark" checked="false" value="trial"></ion-checkbox>
-      </ion-item>
-         <!-- <ion-item>
-            <ion-label>วันบัตรหมดอายุ</ion-label>
-            <ion-input type="text" formControlName="dateOfExpiry"></ion-input>
-          </ion-item> -->
-         
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <div class="container addmerber">
+        <form [formGroup]="FormItem" (ngSubmit)="okDialog()">
+            <ion-grid>
+                <ion-row>
+                    <div class="col-md-6 img-upload  text-center">
+
+                        <img src="{{FormItem.get('picture').value}}">
+                        <div>
+                            <button class="btn btn-danger"><i class="fa fa-upload"></i>upload</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="user-contact">
+                            <h2>ข้อมูลส่วนตัว</h2>
+                            <ion-item [class.invalid]="isValid('tHName')">
+                                <ion-label color="dark">ชื่อ-สกุล</ion-label>
+                                <ion-input type="text" formControlName="tHName" placeholder="กรอกชื่อ-นามสกุล"></ion-input>
+                            </ion-item>
+                            <ion-item [class.invalid]="isValid('idNumber')">
+                                <ion-label color="dark">รหัสบัตรประจำตัวประชาชน</ion-label>
+                                <ion-input type="text" formControlName="idNumber" placeholder="กรอกรหัสบัตรประจำตัวประชาชน">
+                                </ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label color="dark">เกิดวันที่</ion-label>
+                                <ion-datetime type="Date" formControlName="dateOfBirth" placeholder="เลือกวันเดือนปีเกิด"></ion-datetime>
+                            </ion-item>
+                            <ion-item [class.invalid]="isValid('address')">
+                                <ion-label color="dark">ที่อยู่</ion-label>
+                                <ion-input type="text" formControlName="address" placeholder="กรอกที่อยุ่ปัจุบัน"></ion-input>
+                            </ion-item>
+                            <ion-item [class.invalid]="isValid('phoneNumber')">
+                                <ion-label color="dark">เบอร์โทรศัพท์</ion-label>
+                                <ion-input type="number" formControlName="phoneNumber" placeholder="กรอกเบอร์โทรศัพท์"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label color="dark">การศึกษา</ion-label>
+                                <ion-select type="text" formControlName="education" placeholder="เลือกการศึกษา">
+                                    <ion-option value="noedu">ไม่จบการศึกษา</ion-option>
+                                    <ion-option value="primary">ประถมศึกษา</ion-option>
+                                    <ion-option value="Junior">มัธยมศึกษาตอนต้น</ion-option>
+                                    <ion-option value="Senior">มัธยมศึกษาตอนปลาย</ion-option>
+                                    <ion-option value="Vocational">ปวช</ion-option>
+                                    <ion-option value="Diploma">ปวส</ion-option>
+                                    <ion-option value="Bachelor">ปริญญาตรี</ion-option>
+                                    <ion-option value="Master">ปริญญาโท</ion-option>
+                                    <ion-option value="Doctor">ปริญญาเอก</ion-option>
+                                </ion-select>
+                            </ion-item>
+                        </div>
+                    </div>
+                </ion-row>
+            </ion-grid>
+
+            <div class="work-position ">
+                <h2>ข้อมูลตำแหน่งงาน</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ion-item [class.invalid]="isValid('department')">
+                            <ion-label color="dark">แผนก</ion-label>
+                            <ion-select type="text" formControlName="department" placeholder="เลือกแผนก">
+                                <ion-option value="cook">ห้องครัว</ion-option>
+                                <ion-option value="res">ห้องอาหาร</ion-option>
+                                <ion-option value="front">ฟร้อน</ion-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item [class.invalid]="isValid('function')">
+                            <ion-label color="dark">ตำแหน่ง</ion-label>
+                            <ion-select type="text" formControlName="function" placeholder="เลือกตำแหน่งงาน">
+                                <ion-option value="cash">แคชเชียร์</ion-option>
+                                <ion-option value="bar">บาร์น้ำ</ion-option>
+                                <ion-option value="front">ฟร้อน</ion-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item [class.invalid]="isValid('gen_salary')">
+                            <ion-label color="dark">การจ่ายเงินเดือน</ion-label>
+                            <ion-select type="text" formControlName="gen_salary" placeholder="เลือกรูปแบบการจ่ายเงินเดือน">
+                                <ion-option value="month">รายเดือน</ion-option>
+                                <ion-option value="day">รายวัน</ion-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item [class.invalid]="isValid('salary')">
+                            <ion-label color="dark">เงินเดือน</ion-label>
+                            <ion-input type="text" formControlName="salary" placeholder="ระบุเงินเดือน"></ion-input>
+                        </ion-item>
+                    </div>
+                    <div class="col-md-6">
+
+                        <ion-item [class.invalid]="isValid('working_hours')">
+                            <ion-label color="dark">เวลาทำงาน</ion-label>
+                            <ion-select type="text" formControlName="working_hours" placeholder="เลือกเวลาทำงาน">
+                                <ion-option value="morning">07.00 น. - 15.00 น.</ion-option>
+                                <ion-option value="afternoon">15.00 น. - 23.00 น.</ion-option>
+                                <ion-option value="night">23.00 น. - 07.00 น.</ion-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item [class.invalid]="isValid('social_security')">
+                            <ion-label color="dark">ประกันสังคม</ion-label>
+                            <ion-checkbox color="dark" checked="false" value="social_security"></ion-checkbox>
+                        </ion-item>
+                        <ion-item [class.invalid]="isValid('trial')">
+                            <ion-label color="dark">ทดลองงาน</ion-label>
+                            <ion-checkbox color="dark" checked="false" value="trial"></ion-checkbox>
+                        </ion-item>
+                    </div>
+                </div>
+
+
+                <!-- <ion-item>
+<ion-label>วันบัตรหมดอายุ</ion-label>
+<ion-input type="text" formControlName="dateOfExpiry"></ion-input>
+</ion-item> -->
+            </div>
+            <div class="button-group">
+                <button type="button" class="btn btn-danger btn-lg" (click)="closeDialog()"><i class="fas fa-times"></i>ยกเลิก</button>
+                <button type="submit" class="btn btn-success btn-lg" [disabled]="this.FormItem.invalid"> <i class="far fa-check-circle"></i>บันทึก</button>
+            </div>
+        </form>
+    </div>
 
     <ion-grid padding-top>
-      <ion-row>
-        <ion-col col-6>
-        </ion-col>
-        <ion-col>
-          <button ion-button block type="button" color="light" (click)="closeDialog()">ยกเลิก</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button block type="submit" color="primary" [disabled]="this.FormItem.invalid">บันทึก</button>
-        </ion-col>
-      </ion-row>
+        <ion-row>
+            <ion-col col-6>
+            </ion-col>
+            <ion-col>
+                <button ion-button block type="button" color="light" (click)="closeDialog()">ยกเลิก</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button block type="submit" color="primary" [disabled]="this.FormItem.invalid">บันทึก</button>
+            </ion-col>
+        </ion-row>
     </ion-grid>
-  </form>
+    </form>
 </ion-content>
