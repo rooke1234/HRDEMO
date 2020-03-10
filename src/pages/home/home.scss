@@ -31,6 +31,21 @@ page-home {
         tr {
             margin: 5px 0;
         }
+        .timeline {
+            width: 100%;
+            // background: red;
+        }
+        .time {
+            height: 30px;
+        }
+        .time1 {
+            background: green;
+            width: 70%;
+        }
+        .time2 {
+            background: red;
+            width: 15%;
+        }
     }
     ion-fab {
         padding-bottom: 30px;
