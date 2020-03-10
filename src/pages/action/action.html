@@ -9,16 +9,43 @@
         <ion-navbar>
             <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
+     </button>
             <ion-title text-center>Action</ion-title>
-            <button ion-button color="secondary" (click)="Addaction()">
-      <ion-icon name="md-add">เพิ่มข้อมูล</ion-icon></button>
+            <!--    <button ion-button color="secondary" (click)="Addaction()">
+      <ion-icon name="md-add">เพิ่มข้อมูล</ion-icon></button> -->
         </ion-navbar>
     </ion-row>
 </ion-header>
 
 <ion-content padding>
-    <div class="container">
+    <div class="container-fluid">
+        <div class="action-table">
+            <table class="table table-striped">
+                <thead>
+                    <th>#</th>
+                    <th>ชื่อ-สกุล</th>
+                    <th>แผนก</th>
+                    <th>รายการ</th>
+                    <th>หมายเหตุ</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let member of members,let i =index">
+                        <td>{{i+1}}</td>
+                        <td>
+                            {{ member.tHName }}
+                        </td>
+                        <td>
+                            {{ member.department }}
+                        </td>
+                        <td>h</td>
+                        <td>h</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <div class="container">
         <ion-card>
             <ion-card-content>
                 <ion-row text-center>
@@ -54,10 +81,10 @@
                     </ion-row>
                 </ion-item>
             </ion-list>
-        </ion-grid>
-        <ion-fab bottom right class="text-center">
-            <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
-            <p>เพิ่มข้อมูล</p>
-        </ion-fab>
-    </div>
+        </ion-grid> -->
+    <ion-fab bottom right class="text-center" (click)="Addaction()">
+        <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+        <p>เพิ่มข้อมูล</p>
+    </ion-fab>
+    <!-- //</div> -->
 </ion-content>

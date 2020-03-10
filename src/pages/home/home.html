@@ -5,42 +5,92 @@
      </button>
         <ion-title>โปรแกรมฝ่ายบุคคล</ion-title>
 
-        <ion-card text-center>
+        <!-- <ion-card text-center>
             <ion-col col-3><button ion-button round (click)="presentModalAddMember()"><ion-icon name="person-add"></ion-icon>เพิ่มพนักงาน</button></ion-col>
             <ion-col col-3><button ion-button round (click)="presentModalCreatmembercard()"><ion-icon name="contact"> </ion-icon>บัตรประจำตัวพนักงาน</button></ion-col>
             <ion-col col-3><button ion-button round (click)="presentModalFingerprint()"><ion-icon name="finger-print"> </ion-icon>พิมพ์ลายนิ้วมือ</button></ion-col>
             <ion-col col-3><button ion-button round><ion-icon name="cash"></ion-icon>สรุปเงินเดือน</button></ion-col>
-        </ion-card>
-        <ion-title>โปรแกรมฝ่ายบุคคล</ion-title>
+        </ion-card> -->
+        <!-- <ion-title>โปรแกรมฝ่ายบุคคล</ion-title> -->
     </ion-navbar>
-    <ion-card text-center>
-        <ion-col col-3><button ion-button round (click)="presentModalAddMember()"><ion-icon name="person-add"></ion-icon>เพิ่มพนักงาน</button></ion-col>
-        <!-- <ion-col col-3><button ion-button round (click)="presentModalCreatmembercard()"><ion-icon name="contact"> </ion-icon>บัตรประจำตัวพนักงาน</button></ion-col>
+    <!-- <ion-card text-center>
+        <ion-col col-3><button ion-button round (click)="presentModalAddMember()"><ion-icon name="person-add"></ion-icon>เพิ่มพนักงาน</button></ion-col> -->
+    <!-- <ion-col col-3><button ion-button round (click)="presentModalCreatmembercard()"><ion-icon name="contact"> </ion-icon>บัตรประจำตัวพนักงาน</button></ion-col>
   <ion-col col-3><button ion-button round (click)="presentModalFingerprint()"><ion-icon name="finger-print"> </ion-icon>พิมพ์ลายนิ้วมือ</button></ion-col> -->
-        <ion-col col-3><button ion-button round (click)="presentSalary()"><ion-icon name="cash"></ion-icon>สรุปเงินเดือน</button></ion-col>
-    </ion-card>
+    <!-- <ion-col col-3><button ion-button round (click)="presentSalary()"><ion-icon name="cash"></ion-icon>สรุปเงินเดือน</button></ion-col>
+    </ion-card> -->
 </ion-header>
 
 <ion-content padding>
-    <ion-grid>
-        <ion-row text-center align-items-center>
-            <ion-col col-2></ion-col>
-            <ion-col col-5>
-                <ion-searchbar (ionInput)="searching($event)"></ion-searchbar>
-            </ion-col>
-            <ion-col col-3>
-                <ion-item>
-                    <ion-label>แผนก</ion-label>
-                    <ion-select [(ngModel)]="department">
-                        <ion-option list="cook">ห้องครัว</ion-option>
-                        <ion-option list="res">ห้องอาหาร</ion-option>
-                        <ion-option list="ibar">IBar</ion-option>
-                    </ion-select>
-                </ion-item>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    <ion-card>
+    <!-- <ion-card text-center>
+        <ion-col col-3><button ion-button round (click)="presentModalAddMember()"><ion-icon name="person-add"></ion-icon>เพิ่มพนักงาน</button></ion-col> 
+        <ion-col col-3><button ion-button round (click)="presentModalCreatmembercard()"><ion-icon name="contact"> </ion-icon>บัตรประจำตัวพนักงาน</button></ion-col>
+        <ion-col col-3><button ion-button round (click)="presentModalFingerprint()"><ion-icon name="finger-print"> </ion-icon>พิมพ์ลายนิ้วมือ</button></ion-col>
+        <ion-col col-3><button ion-button round (click)="presentSalary()"><ion-icon name="cash"></ion-icon>สรุปเงินเดือน</button></ion-col>
+    </ion-card> -->
+    <div class="seachbar d-flex justify-content-center text-center">
+        <div class=" search-input">
+
+            <ion-searchbar (ionInput)="searching($event) "></ion-searchbar>
+        </div>
+
+        <div class="selector ">
+            <ion-item>
+                <ion-label color="dark">เลือกแผนก</ion-label>
+                <ion-select [(ngModel)]="department ">
+                    <ion-option list="cook ">ห้องครัว</ion-option>
+                    <ion-option list="res ">ห้องอาหาร</ion-option>
+                    <ion-option list="ibar ">IBar</ion-option>
+                </ion-select>
+            </ion-item>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="employee-list ">
+            <table class="table table-hover ">
+                <thead>
+                    <th>#</th>
+                    <th>ชื่อ-สกุล</th>
+                    <th class="text-center ">แผนก</th>
+                    <th class="text-center ">สาย</th>
+                    <th class="text-center ">ลา</th>
+                    <th class="text-center ">มา</th>
+                    <th class="text-center ">ขาด</th>
+                    <th class="text-center ">OT</th>
+                    <th class="text-center ">กลับก่อน</th>
+                    <th class="text-center ">แก้ไข</th>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let member of members " (click)="GoToPersonPage() ">
+                        <th> {{ member._id }}</th>
+                        <td>{{ member.tHName }}</td>
+                        <td class="text-center "> {{ member.department }}</td>
+                        <td class="text-center ">{{ member.late }}</td>
+                        <td class="text-center ">{{ member.leave }}</td>
+                        <td class="text-center "> {{ member.come }}</td>
+                        <td class="text-center "> {{ member.off}}</td>
+                        <td class="text-center "> {{ member.ot }}</td>
+                        <td class="text-center "> {{ member.lbefore }}</td>
+                        <td class="text-center ">
+                            <button class="btn btn-danger btn-lg " (click)="presentModalEditMember(member)">แก้ไข</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <ion-fab right bottom>
+        <button ion-fab><ion-icon name="arrow-dropup"></ion-icon></button>
+        <ion-fab-list side="top">
+            <button ion-fab color="dark" (click)="presentSalary()"> สรุปเงินเดือน</button>
+            <button ion-fab color="danger" (click)="presentModalAddMember()">เพิ่มพนักงาน </button>
+            <button ion-fab color="primary" (click)="presentSalary()"> ทำบัตร</button>
+        </ion-fab-list>
+    </ion-fab>
+
+    <!-- <ion-card>
         <ion-card-content>
             <ion-row text-center>
                 <ion-col col-1>
@@ -72,13 +122,13 @@
                 </ion-col>
             </ion-row>
         </ion-card-content>
-    </ion-card>
+    </ion-card> -->
 
 
-    <ion-grid>
-        <ion-list>
-            <!-- <ion-item *ngFor="let member of members" (click)="presentModalAddMember()"> -->
-            <ion-item *ngFor="let member of members" (click)="GoToPersonPage()">
+    <!-- <ion-grid>
+        <ion-list> -->
+    <!-- <ion-item *ngFor=" let member of members " (click)="presentModalAddMember() "> -->
+    <!-- <ion-item *ngFor="let member of members " (click)="GoToPersonPage() ">
                 <ion-row text-center align-items-center>
                     <ion-col col-1>
                         {{ member._id }}
@@ -108,18 +158,18 @@
                         {{ member.lbefore }}
                     </ion-col>
                     <ion-col>
-                        <button ion-button block color="light" (click)="presentModalEditMember(member)">แก้ไข</button>
+                        <button ion-button block color="light " (click)="presentModalEditMember(member) ">แก้ไข</button>
                     </ion-col>
                 </ion-row>
             </ion-item>
         </ion-list>
-    </ion-grid>
+    </ion-grid> -->
 
 
 
 
     <!-- <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+    If you get lost, the <a href="http://ionicframework.com/docs/v2 ">docs</a> will show you the way.
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button> -->

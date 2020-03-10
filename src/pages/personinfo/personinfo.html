@@ -1,7 +1,6 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>เพิ่มพนักงาน</ion-title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <ion-title>ข้อมูลพนักงาน</ion-title>
     </ion-navbar>
 </ion-header>
 
@@ -11,9 +10,8 @@
             <div class="user-info">
                 <div class="row">
                     <div class="col-md-5">
-                        <div class="img-upload  mx-auto ">
+                        <div class="img-box  mx-auto ">
                             <img src="{{FormItem.get('picture').value}}">
-                            <button class="btn btn-danger"> <i class="fa fa-upload"></i> upload</button>
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -52,12 +50,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="button-group ">
+                        <div class=" button-group">
                             <button class="btn btn-primary btn-lg">ทำบัตร</button>
                             <button class="btn btn-danger btn-lg">วันหยุด</button>
                             <button class="btn btn-secondary btn-lg">ลายนิ้วมือ</button>
                             <button class="btn btn-warning btn-lg">สแกนใบหน้า</button>
                             <button class="btn btn-dark btn-lg">ลาออก</button>
+
                         </div>
                     </div>
 
@@ -112,4 +111,9 @@
             </table>
         </section>
     </div>
+    <ion-fab bottom right class="text-center" (click)="presentModalAddMember()">
+        <button ion-fab color="danger">  <ion-icon name="build"></ion-icon>
+        </button>
+        <p>แก้ไขข้อมูล</p>
+    </ion-fab>
 </ion-content>

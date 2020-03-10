@@ -10,19 +10,20 @@
             <button ion-button menuToggle>
               <ion-icon name="menu"></ion-icon>
             </button>
-            <ion-title text-center>เครดิตพนักงาน</ion-title>
-            <ion-buttons end>
-                <button ion-button color="secondary" (click)="Addtime()"> 
-              <ion-icon name="md-add">เพิ่มข้อมูล</ion-icon>
-    </button>
-            </ion-buttons>
+            <ion-title>เครดิตพนักงาน</ion-title>
+
         </ion-navbar>
     </ion-row>
 </ion-header>
 
 <ion-content padding>
-    <div class="container">
-        <ion-card>
+    <!-- <ion-buttons end>
+        <button ion-button color="secondary" (click)="Addtime()"> 
+              <ion-icon name="md-add">เพิ่มข้อมูล</ion-icon>
+    </button>
+    </ion-buttons> -->
+    <div class="container-fluid">
+        <!-- <ion-card>
             <ion-card-content>
                 <ion-row text-center>
                     <ion-col col-3>
@@ -54,10 +55,314 @@
                     </ion-row>
                 </ion-item>
             </ion-list>
-        </ion-grid>
-        <ion-fab bottom right class="text-center">
-            <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
-            <p>เพิ่มข้อมูล</p>
-        </ion-fab>
+        </ion-grid> -->
+        <div class="container-fluid">
+            <div class="employee-credit-table">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>ชื่อ-สกุล</th>
+                            <th>แผนก</th>
+                            <th>รายการ</th>
+                            <th>ยอดเงิน</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Mr.bob Sally</td>
+                            <td>IBar</td>
+                            <th>ค้างค่าน้ำโค้ก</th>
+                            <th>15.00</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+    <ion-fab bottom right class="text-center" (click)="Addtime()">
+        <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+        <p>เพิ่มข้อมูล</p>
+    </ion-fab>
 </ion-content>

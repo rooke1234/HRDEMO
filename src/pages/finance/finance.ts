@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, DateTime,ModalController } from 'ionic-angular';
+import { NavController, NavParams, DateTime, ModalController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home'
 import { EmployeePage } from '../employee/employee';
@@ -20,10 +20,10 @@ import { Member, MemberLst } from '../../models/Member';
   templateUrl: 'finance.html',
 })
 export class FinancePage {
-   
+
   public members: Member[];
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
-    this.getMembers(); 
+    this.getMembers();
   }
   getMembers() {
     this.members = MemberLst.sort((a, b) => (Number)(b._id) - (Number)(a._id));
@@ -54,7 +54,7 @@ export class FinancePage {
         this.members.unshift(member);
       }
     });
-    modal.present(); 
+    modal.present();
   }
 
   presentModalEditMember(member: Member) {
@@ -70,7 +70,7 @@ export class FinancePage {
   }
 
   presentModalCreatmembercard(member: Member) {
-    const modal = this.modalCtrl.create("MembercardPage", {member: member });
+    const modal = this.modalCtrl.create("MembercardPage", { member: member });
     modal.onDidDismiss(data => {
       if (data) {
         let member = data.value;
@@ -81,7 +81,7 @@ export class FinancePage {
     modal.present();
   }
   presentModalFingerprint(member: Member) {
-    const modal = this.modalCtrl.create("DifingerprintPage", {member: member });
+    const modal = this.modalCtrl.create("DifingerprintPage", { member: member });
     modal.onDidDismiss(data => {
       if (data) {
         let member = data.value;
@@ -91,5 +91,5 @@ export class FinancePage {
     });
     modal.present();
   }
-  }
+}
 

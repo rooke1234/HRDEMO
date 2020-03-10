@@ -11,15 +11,11 @@ page-personinfo {
         padding-bottom: 30px;
         border-bottom: 2px solid rgb(160, 156, 156);
     }
-    .img-upload {
+    .img-box {
         text-align: center;
         margin: 0 auto;
         img {
             width: 80%;
-        }
-        button {
-            width: 150px;
-            margin: 10px;
         }
     }
     .user-info {
@@ -69,6 +65,17 @@ page-personinfo {
         span {
             font-weight: lighter;
             color: red;
+        }
+    }
+    ion-fab {
+        padding-bottom: 30px;
+        padding-right: 20px;
+        color: red;
+        button {
+            padding: 40px;
+        }
+        p {
+            margin-top: 3px;
         }
     }
 }
