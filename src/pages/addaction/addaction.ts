@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Member } from '../../models/Member';
+import { HomePage } from '../home/home';
+import { PersonsearchPage } from '../personsearch/personsearch';
+import { MembercardPage } from '../membercard/membercard';
+import { PersoninfoPageModule } from '../personinfo/personinfo.module';
 
 /**
  * Generated class for the AddactionPage page.
@@ -16,6 +20,7 @@ import { Member } from '../../models/Member';
 })
 export class AddactionPage {
   public members: Member[];
+  reason :any ;
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
     // this.Addaction();
   }
@@ -24,16 +29,12 @@ export class AddactionPage {
     console.log('ionViewDidLoad AddactionPage');
   }
 
-  Addaction() {
-    var count = this.members.length + 1;
-    const modal = this.modalCtrl.create("DisearchactionPage", { _id: "000" + count });
-    modal.onDidDismiss(data => {
-      if (data) {
-        let member = data.value;
-        this.members.unshift(member);
-      }
-    });
-    modal.present(); 
+
+
+
+  presentModal() {
+    const modal = this.modalCtrl.create(PersonsearchPage);
+    modal.present();
   }
 
 }

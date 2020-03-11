@@ -1,4 +1,30 @@
 page-addaction {
+    .addaction {
+        margin: 0 auto;
+        width: 50%;
+        .choice {
+            padding-top: 30px;
+            select {
+                padding: 40px;
+                height: 40px;
+            }
+            .reason {
+                margin-bottom: 20px;
+            }
+            option {
+                font-size: 18px;
+            }
+            .sub-reason {
+                padding: 10px 0;
+            }
+        }
+    }
+    .person-select {
+        border-bottom: 1px solid black;
+        p {
+            font-size: 20px;
+        }
+    }
     form {
         margin: 10px auto 50px auto;
     }

@@ -1,0 +1,64 @@
+page-workgraph {
+    .user-info {
+        margin: 10px 0;
+    }
+    .work-graph {
+        margin-top: 10px;
+        thead {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        tr {
+            margin: 5px 0;
+        }
+        .timeline {
+            width: 100%;
+            // background: red;
+        }
+        .day {
+            height: 30px;
+        }
+        .normal,
+        .day13-normal,
+        .day14-normal {
+            background: green;
+            width: 70%;
+        }
+        .ot {
+            background: red;
+            width: 15%;
+        }
+        .day1-dayoff {
+            width: 100%;
+            background: black;
+        }
+        .day14 {
+            opacity: 0.5;
+        }
+    }
+    #working-table {
+        margin: 20px 0 50px 0;
+        border-top: 1px solid rgb(116, 112, 112);
+        .working-total {
+            margin-top: 15px;
+            border-bottom: 1px solid rgb(116, 112, 112);
+            span {
+                color: red;
+            }
+        }
+        .table {
+            margin-top: 20px;
+        }
+    }
+    ion-fab {
+        padding-bottom: 30px;
+        padding-right: 20px;
+        color: red;
+        button {
+            padding: 40px;
+        }
+        p {
+            margin-top: 3px;
+        }
+    }
+}

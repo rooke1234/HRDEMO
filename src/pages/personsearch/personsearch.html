@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>เลือกบุคคล</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-col col-7>
+        <ion-searchbar (ionInput)="searching($event)"></ion-searchbar>
+    </ion-col>
+
+
+    <div class="table table-hover">
+        <table>
+            <thead>
+
+                <th> ไอดี</th>
+
+                <th> ชื่อ - สกุล</th>
+
+                <th> แผนก</th>
+
+                <th> ตำแหน่ง</th>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let member of members">
+                    <td>{{ member._id }}</td>
+                    <td> {{ member.tHName }}</td>
+                    <td>{{ member.department }}</td>
+                    <td> {{ member.function}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ion-content>
