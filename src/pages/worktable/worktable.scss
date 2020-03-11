@@ -1,0 +1,23 @@
+page-worktable {
+    .work-timeline {
+        margin: 20px 0;
+    }
+    .graph {
+        width: 100%;
+        .time {
+            height: 50px;
+            color: white;
+            p {
+                margin-top: 14px;
+            }
+        }
+        .time1 {
+            width: 70%;
+            background: green;
+        }
+        // .time2 {
+        //     width: 15%;
+        //     background: red;
+        // }
+    }
+}

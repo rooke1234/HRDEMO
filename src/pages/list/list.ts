@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home'
 import { EmployeePage } from '../employee/employee';
 import { Title } from '@angular/platform-browser';
+import { WorktablePage } from '../worktable/worktable';
 
 
 @Component({
@@ -89,6 +90,10 @@ export class ListPage {
 
   Addaction(){
     
+  }
+
+  PresentWorkTable(){
+    this.navCtrl.push(WorktablePage);
   }
 }
 

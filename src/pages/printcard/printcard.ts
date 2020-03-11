@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Member, MemberLst } from '../../models/Member';
+import { PersoninfoPage } from '../personinfo/personinfo';
 
 /**
  * Generated class for the PrintcardPage page.
@@ -36,6 +37,9 @@ export class PrintcardPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrintcardPage');
+  }
+  Printcard() {
+    this.navCtrl.push(PersoninfoPage);
   }
 
 }

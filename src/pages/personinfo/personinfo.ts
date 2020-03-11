@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ModalController,AlertController } from 'ionic-angular';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { AddmemberPage } from '../addmember/addmember';
+import { Member } from '../../models/Member';
+import { HomePage } from '../home/home';
+import { DiEmdayoffPage } from '../di-emdayoff/di-emdayoff';
 
 /**
  * Generated class for the PersoninfoPage page.
@@ -18,8 +22,8 @@ export class PersoninfoPage {
   public FormItem: FormGroup;
   private submitRequested: boolean
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,public fb: FormBuilder,private viewCtrl: ViewController) {
+  public members: Member[];
+  constructor(public navCtrl: NavController, public navParams: NavParams,public fb: FormBuilder,private viewCtrl: ViewController,public modalCtrl: ModalController,public alertCtrl: AlertController) {
     this.FormItem = this.fb.group({
       '_id': [null],
       'idNumber': [null, [Validators.compose([Validators.pattern('[0-9]*')]), Validators.minLength(13), Validators.maxLength(13), Validators.required]],
@@ -65,6 +69,71 @@ export class PersoninfoPage {
       return (ctrls.errors && (ctrls.errors.maxlength || ctrls.errors.minlength || ctrls.errors.pattern)) && (ctrls.dirty || this.submitRequested);
     }
     return ctrl.invalid && (ctrl.dirty || this.submitRequested);
+  }
+  presentModalAddMember() {
+    this.navCtrl.push(AddmemberPage); 
+  }
+  empdayoff(member: Member){
+    const modal = this.modalCtrl.create("DiEmdayoffPage", {member: member });
+    modal.onDidDismiss(data => {
+      if (data) {
+        let member = data.value;
+        var index = this.members.findIndex(it => it._id == member._id);
+        this.members[index] = member;
+      }
+    });
+    modal.present();
+  }
+
+  presentModalprintcard(member: Member) {
+    const modal = this.modalCtrl.create("PrintcardPage", {member: member });
+    modal.onDidDismiss(data => {
+      if (data) {
+        let member = data.value;
+        var index = this.members.findIndex(it => it._id == member._id);
+        this.members[index] = member;
+      }
+    });
+    modal.present();
+  }
+  Modalmembercard(member: Member){
+    this.modalCtrl.create("MembercardPage",{member: member});
+  }
+
+  presentModalfingerprint(member: Member) {
+    const modal = this.modalCtrl.create("DifingerprintPage", {member: member });
+    modal.onDidDismiss(data => {
+      if (data) {
+        let member = data.value;
+        var index = this.members.findIndex(it => it._id == member._id);
+        this.members[index] = member;
+      }
+    });
+    modal.present();
+  }
+  
+
+  Alerttakeoff() {
+    const confirm = this.alertCtrl.create({
+      title: 'ยืนยันการลาออก',
+      message: 'ลบนายกฤษณะ ตระกูลพรหมออกจากรายชื่อพนักงาน',
+      buttons: [
+        {
+          text: 'ยกเลิก',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'ยืนยัน',
+          handler: () => {
+            console.log('Agree clicked');
+            this.navCtrl.push(PersoninfoPage);
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
 }

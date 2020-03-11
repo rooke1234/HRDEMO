@@ -1,3 +1,66 @@
 page-home {
-
+    .searchbar {
+        text-align: center;
+        margin: 0 auto;
+        input {
+            border-radius: 20px;
+            border: 1px solid #000;
+            width: 500px;
+            box-shadow: none;
+        }
+        .selector {
+            width: 500px;
+            color: black;
+            margin: auto 0;
+            ion-searchbar {
+                border-radius: 5px;
+                width: 200px;
+            }
+            on-select {
+                width: 500px;
+                ;
+            }
+        }
+    }
+    .employee-list {
+        margin-top: 10px;
+        thead {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        tr {
+            margin: 5px 0;
+        }
+        .timeline {
+            width: 100%;
+            // background: red;
+        }
+        .time {
+            height: 30px;
+        }
+        .time1 {
+            background: green;
+            width: 70%;
+        }
+       
+    }
+    ion-fab {
+        padding-bottom: 30px;
+        padding-right: 20px;
+        color: red;
+        button {
+            padding: 40px;
+        }
+        p {
+            margin-top: 3px;
+        }
+        ion-fab-list {
+            margin-bottom: 150px;
+            color: red;
+            // padding: 40px;
+            button {
+                padding: 40px;
+            }
+        }
+    }
 }

@@ -11,6 +11,9 @@ import { Action } from 'rxjs/scheduler/Action';
 import { ActionPage } from '../pages/action/action';
 import { FormPage } from '../pages/form/form';
 import { PersoninfoPage } from '../pages/personinfo/personinfo';
+import { AddmemberPage } from '../pages/addmember/addmember';
+import { WorktablePage } from '../pages/worktable/worktable';
+import { AddactionPage } from '../pages/addaction/addaction';
 
 
 @Component({
@@ -32,7 +35,7 @@ export class MyApp {
       { title: 'รายชื่อพนักงาน', component: HomePage },
       { title: 'ตารางงาน', component: ListPage },
      // { title: 'เพิ่มพนักงาน', component: EmployeePage},
-      { title: 'การเงิน', component: FinancePage },
+      { title: 'เครดิต', component: FinancePage },
       { title: 'Action', component: ActionPage},
       { title: 'ฟอร์ม', component: FormPage }
     ];

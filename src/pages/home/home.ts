@@ -6,6 +6,8 @@ import { SalaryPage } from '../salary/salary';
 import { AddmemberPage } from '../addmember/addmember';
 
 
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

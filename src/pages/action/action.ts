@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 import { ListPage } from '../list/list';
 import { AlertController } from 'ionic-angular';
 import { Member, MemberLst } from '../../models/Member';
+import { AddactionPage } from '../addaction/addaction';
 
 /**
  * Generated class for the ActionPage page.
@@ -127,6 +128,9 @@ export class ActionPage {
       }
     });
     modal.present(); 
+  }
+  PresentAddActionPage(){
+    this.navCtrl.push(AddactionPage);
   }
 
 }

@@ -1,63 +1,137 @@
 <ion-header>
-  <ion-row text-right align-items-center>
-  <ion-navbar>
-    <button ion-button menuToggle>
+    <ion-row text-right>
+        <ion-navbar>
+            <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title text-center>ตารางเวลางาน</ion-title>
-    <button ion-button color="secondary" (click)="Addtime()">
-      <ion-icon name="md-add-circle">เพิ่มตารางเวลา</ion-icon></button>
-  </ion-navbar>
-</ion-row>
+            <ion-title text-center>ตารางเวลางาน</ion-title>
+            <!-- <button ion-button color="secondary" (click)="Addtime()">
+      <ion-icon name="md-add-circle">เพิ่มตารางเวลา</ion-icon></button> -->
+        </ion-navbar>
+    </ion-row>
 </ion-header>
 
 
 
 
 <ion-content>
-  <ion-card>
-    <ion-card-content>
-      <ion-row text-center>
-        <ion-col col-3>
-          ชื่อเวลางาน
-        </ion-col>
-        <ion-col col-3>
-          เวลา
-        </ion-col>
-        <ion-col col-3>
-          จำนวนคน
-        </ion-col>
-         </ion-row>
-    </ion-card-content>
-  </ion-card>
+    <!-- <ion-card>
+        <ion-card-content>
+            <ion-row text-center>
+                <ion-col col-3>
+                    ชื่อเวลางาน
+                </ion-col>
+                <ion-col col-3>
+                    เวลา
+                </ion-col>
+                <ion-col col-3>
+                    จำนวนคน
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
 
-  <ion-grid>
+    <ion-grid>
+        <ion-list>
+            <ion-item *ngFor="let member of members">
+                <ion-row text-center align-items-center>
+                    <ion-col col-2>
+                        {{ member.tHName }}
+                    </ion-col>
+                    <ion-col col-2>
+                        {{ member.department }}
+                    </ion-col>
+
+
+                </ion-row>
+            </ion-item>
+        </ion-list>
+    </ion-grid>
+
     <ion-list>
-      <ion-item *ngFor="let member of members">
-        <ion-row text-center align-items-center>
-          <ion-col col-2>
-            {{ member.tHName }}
-          </ion-col>
-          <ion-col col-2>
-            {{ member.department }}
-          </ion-col>
-          
-          
-        </ion-row>
-      </ion-item>
-    </ion-list>
-  </ion-grid>
-  
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-start></ion-icon>
       {{item.title}}
       <div class="item-note" item-end>
         {{item.note}}
       </div>
     </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+    </ion-list>
+    <div *ngIf="selectedItem" padding>
+        You navigated here from <b>{{selectedItem.title}}</b>
+    </div>
+
+    <table clss="table table-striped">
+        <thead>
+            <tr>
+                <th>ชื่อเวลางาน</th>
+                <th>เวลา</th>
+                <th>จำนวนคน</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th>ตารางทำงานที่1</th>
+            <tr>08:00 - 12:00</tr>
+            <tr> 4 </tr>
+        </tbody>
+    </table> -->
+    <div class="container-fluid">
+        <div class="work-table">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ลำดับ</th>
+                        <th scope="col">ชื่อเวลางาน</th>
+                        <th scope="col">เวลา</th>
+                        <th class="text-center">จำนวนคน</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr (click)="PresentWorkTable()">
+                        <th scope="row">1</th>
+                        <td>ตารางงานที่A</td>
+                        <td>08:00-17:00</td>
+                        <td class="text-center">2</td>
+                    </tr>
+                    <tr (click)="PresentWorkTable()">
+                        <th scope="row">2</th>
+                        <td>ตารางงานที่B</td>
+                        <td>17:00-01:00</td>
+                        <td class="text-center">5</td>
+                    </tr>
+                    <tr (click)="PresentWorkTable()">
+                        <th scope="row">3</th>
+                        <td>ตารางงานที่C</td>
+                        <td>01:00-10:00</td>
+                        <td class="text-center">8</td>
+                    </tr>
+                    <tr (click)="PresentWorkTable()">
+                        <th scope="row">4</th>
+                        <td>ตารางงานที่D</td>
+                        <td>10:00-19:00</td>
+                        <td class="text-center">4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>ตารางงานที่F</td>
+                        <td>19:00-04:00</td>
+                        <td class="text-center">6</td>
+                    </tr>
+                    <tr (click)="PresentWorkTable()">
+                        <th scope="row">6</th>
+                        <td>ตารางงานที่G</td>
+                        <td>04:00-13:00</td>
+                        <td class="text-center">10</td>
+                    </tr>
+                    
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ion-fab bottom right class="text-center" (click)="Addtime()">
+        <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+        <p>เพิ่มข้อมูล</p>
+    </ion-fab>
 </ion-content>

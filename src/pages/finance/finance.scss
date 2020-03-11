@@ -1,3 +1,26 @@
 page-finance {
-
+    ion-header {
+        padding-right: 10px;
+    }
+    .employee-credit-table {
+        margin: 40px 0px 50px 0;
+        thead {
+            position: sticky;
+        }
+    }
+    thead {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    ion-fab {
+        padding-bottom: 30px;
+        padding-right: 20px;
+        color: red;
+        button {
+            padding: 40px;
+        }
+        p {
+            margin-top: 3px;
+        }
+    }
 }
