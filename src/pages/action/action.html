@@ -14,7 +14,7 @@
         <div class="action-table">
             <table class="table table-striped">
                 <thead>
-                    <th>#</th>
+                    <!-- <th>ลำดับ</th> -->
                     <th>ชื่อ-สกุล</th>
                     <th>แผนก</th>
                     <th>รายการ</th>
@@ -22,15 +22,15 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let member of members,let i =index">
-                        <td>{{i+1}}</td>
+                        <!-- <td>{{i+1}}</td> -->
                         <td>
                             {{ member.tHName }}
                         </td>
                         <td>
                             {{ member.department }}
                         </td>
-                        <td>h</td>
-                        <td>h</td>
+                        <td>มาสาย</td>
+                        <td>ลาป่วย</td>
                     </tr>
                 </tbody>
             </table>

@@ -91,5 +91,18 @@ export class FinancePage {
     });
     modal.present();
   }
+
+  Addfinancial(member: Member){
+    const modal = this.modalCtrl.create("MembercardPage", { member: member });
+    modal.onDidDismiss(data => {
+      if (data) {
+        let member = data.value;
+        var index = this.members.findIndex(it => it._id == member._id);
+        this.members[index] = member;
+      }
+    });
+    modal.present();
+  }
+  
 }
 

@@ -35,7 +35,7 @@ export class MyApp {
       { title: 'รายชื่อพนักงาน', component: HomePage },
       { title: 'ตารางงาน', component: ListPage },
      // { title: 'เพิ่มพนักงาน', component: EmployeePage},
-      { title: 'การเงิน', component: FinancePage },
+      { title: 'เครดิต', component: FinancePage },
       { title: 'Action', component: ActionPage},
       { title: 'ฟอร์ม', component: FormPage }
     ];

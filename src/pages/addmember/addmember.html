@@ -21,28 +21,28 @@
                             <h2>ข้อมูลส่วนตัว</h2>
                             <ion-item [class.invalid]="isValid('tHName')">
                                 <ion-label color="dark">ชื่อ-สกุล</ion-label>
-                                <ion-input type="text" formControlName="tHName" placeholder="กรอกชื่อ-นามสกุล"></ion-input>
+                                <ion-input type="text" formControlName="tHName" placeholder=""></ion-input>
                             </ion-item>
                             <ion-item [class.invalid]="isValid('idNumber')">
                                 <ion-label color="dark">รหัสบัตรประจำตัวประชาชน</ion-label>
-                                <ion-input type="text" formControlName="idNumber" placeholder="กรอกรหัสบัตรประจำตัวประชาชน">
+                                <ion-input type="text" formControlName="idNumber" placeholder="">
                                 </ion-input>
                             </ion-item>
                             <ion-item>
                                 <ion-label color="dark">เกิดวันที่</ion-label>
-                                <ion-datetime type="Date" formControlName="dateOfBirth" placeholder="เลือกวันเดือนปีเกิด"></ion-datetime>
+                                <ion-datetime type="Date" formControlName="dateOfBirth" placeholder=""></ion-datetime>
                             </ion-item>
                             <ion-item [class.invalid]="isValid('address')">
                                 <ion-label color="dark">ที่อยู่</ion-label>
-                                <ion-input type="text" formControlName="address" placeholder="กรอกที่อยุ่ปัจุบัน"></ion-input>
+                                <ion-input type="text" formControlName="address" placeholder=""></ion-input>
                             </ion-item>
                             <ion-item [class.invalid]="isValid('phoneNumber')">
                                 <ion-label color="dark">เบอร์โทรศัพท์</ion-label>
-                                <ion-input type="number" formControlName="phoneNumber" placeholder="กรอกเบอร์โทรศัพท์"></ion-input>
+                                <ion-input type="number" formControlName="phoneNumber" placeholder=""></ion-input>
                             </ion-item>
                             <ion-item>
                                 <ion-label color="dark">การศึกษา</ion-label>
-                                <ion-select type="text" formControlName="education" placeholder="เลือกการศึกษา">
+                                <ion-select type="text" formControlName="education" placeholder="">
                                     <ion-option value="noedu">ไม่จบการศึกษา</ion-option>
                                     <ion-option value="primary">ประถมศึกษา</ion-option>
                                     <ion-option value="Junior">มัธยมศึกษาตอนต้น</ion-option>
@@ -65,7 +65,7 @@
                     <div class="col-md-6">
                         <ion-item [class.invalid]="isValid('department')">
                             <ion-label color="dark">แผนก</ion-label>
-                            <ion-select type="text" formControlName="department" placeholder="เลือกแผนก">
+                            <ion-select type="text" formControlName="department" placeholder="">
                                 <ion-option value="cook">ห้องครัว</ion-option>
                                 <ion-option value="res">ห้องอาหาร</ion-option>
                                 <ion-option value="front">ฟร้อน</ion-option>
@@ -73,7 +73,7 @@
                         </ion-item>
                         <ion-item [class.invalid]="isValid('function')">
                             <ion-label color="dark">ตำแหน่ง</ion-label>
-                            <ion-select type="text" formControlName="function" placeholder="เลือกตำแหน่งงาน">
+                            <ion-select type="text" formControlName="function" placeholder="">
                                 <ion-option value="cash">แคชเชียร์</ion-option>
                                 <ion-option value="bar">บาร์น้ำ</ion-option>
                                 <ion-option value="front">ฟร้อน</ion-option>
@@ -81,21 +81,21 @@
                         </ion-item>
                         <ion-item [class.invalid]="isValid('gen_salary')">
                             <ion-label color="dark">การจ่ายเงินเดือน</ion-label>
-                            <ion-select type="text" formControlName="gen_salary" placeholder="เลือกรูปแบบการจ่ายเงินเดือน">
+                            <ion-select type="text" formControlName="gen_salary" placeholder="">
                                 <ion-option value="month">รายเดือน</ion-option>
                                 <ion-option value="day">รายวัน</ion-option>
                             </ion-select>
                         </ion-item>
                         <ion-item [class.invalid]="isValid('salary')">
                             <ion-label color="dark">เงินเดือน</ion-label>
-                            <ion-input type="text" formControlName="salary" placeholder="ระบุเงินเดือน"></ion-input>
+                            <ion-input type="text" formControlName="salary" placeholder=""></ion-input>
                         </ion-item>
                     </div>
                     <div class="col-md-6">
 
                         <ion-item [class.invalid]="isValid('working_hours')">
                             <ion-label color="dark">เวลาทำงาน</ion-label>
-                            <ion-select type="text" formControlName="working_hours" placeholder="เลือกเวลาทำงาน">
+                            <ion-select type="text" formControlName="working_hours" placeholder="">
                                 <ion-option value="morning">07.00 น. - 15.00 น.</ion-option>
                                 <ion-option value="afternoon">15.00 น. - 23.00 น.</ion-option>
                                 <ion-option value="night">23.00 น. - 07.00 น.</ion-option>

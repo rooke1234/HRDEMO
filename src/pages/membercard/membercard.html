@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>บัตรพนักงาน</ion-title>
+    <ion-title>เพิ่มค่าใช้จ่ายพนักงาน</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -52,7 +52,7 @@
   <ion-grid>
     <ion-list>
       <ion-item *ngFor="let member of members">
-        <ion-row text-center align-items-center>
+        <ion-row text-center align-items-center (click)="printcard(member)">
           <ion-col col-1>
             {{ member._id }}
           </ion-col>
@@ -65,9 +65,9 @@
           <ion-col col-3>
             {{ member.function}}
           </ion-col>
-          <ion-col>
+          <!-- <ion-col>
             <button ion-button block color="secondary" (click)="printcard(member)">ทำบัตร</button>
-          </ion-col>
+          </ion-col> -->
         </ion-row>
       </ion-item>
     </ion-list>
