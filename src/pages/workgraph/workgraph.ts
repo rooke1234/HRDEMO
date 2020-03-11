@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 import { PersoninfoPage } from '../personinfo/personinfo';
 import { ActionPage } from '../action/action';
 import { HomePage } from '../home/home';
+import { AddactionPage } from '../addaction/addaction';
 
 /**
  * Generated class for the WorkgraphPage page.
@@ -28,7 +29,7 @@ export class WorkgraphPage {
     this.navCtrl.push(PersoninfoPage);
   }
   presentActionPage(){
-    this.navCtrl.push(ActionPage);
+    this.navCtrl.push(AddactionPage);
   }
   
 
