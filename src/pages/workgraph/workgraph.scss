@@ -24,8 +24,19 @@ page-workgraph {
             background: green;
             width: 70%;
         }
-        .ot {
+        .normalmove{
+            margin-left: 15%;
+        }
+        .late {
             background: red;
+            width: 5%;
+        }
+        .normallate {
+            background: green;
+            width: 65%;
+        }
+        .ot {
+            background: rgb(0, 170, 248);
             width: 15%;
         }
         .day1-dayoff {
