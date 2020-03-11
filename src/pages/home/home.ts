@@ -4,6 +4,7 @@ import { Member, MemberLst } from '../../models/Member';
 import { PersoninfoPage } from '../personinfo/personinfo';
 import { AddmemberPage } from '../addmember/addmember';
 import { SalaryPage } from '../salary/salary';
+import { WorkgraphPage } from '../workgraph/workgraph';
 
 
 
@@ -106,6 +107,9 @@ export class HomePage {
 
   GoToPersonPage(){
     this.navCtrl.push(PersoninfoPage);
+  }
+  PresentWorkGraphPage(){
+    this.navCtrl.push(WorkgraphPage);
   }
 
 }

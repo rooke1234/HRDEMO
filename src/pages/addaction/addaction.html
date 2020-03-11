@@ -7,105 +7,35 @@
 <ion-content padding>
     <div class="container-fluid">
         <form action="">
-            <div class="row">
-                <div class="col-md-6 name-select">
-                    <div class="name-search ">
-                        <div class="search-bar d-flex justify-content-center">
-                            <p>ค้นหา </p>
-                            <input type="text" placeholder="กรอกชื่อที่ต้องการค้นหา" class="form-control">
-                            <div class="dropdown">
-                                <button class="btn btn-danger" data-toggle="dropdown">
-                        เลือกแผนก 
-                        <span class="caret"></span>
-                      </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Ibar</a></li>
-                                    <li><a href="#">Ibar</a></li>
-                                    <li><a href="#">Ibar</a></li>
-                                    <li><a href="#">Ibar</a></li>
-                                </ul>
+            <div class="row addaction">
+                <div class="col-md-12 note">
+                    <div>
+                        <div class="d-flex person-select justify-content-between">
+                            <h2>ชื่อ-สกุล</h2>
+                            <p>นาย โชคชัย มีดี</p>
+                            <button class="btn btn-danger" (click)="presentModal()">เลือกบุคคล</button>
+                        </div>
+                        <div class="choice">
+                            <h2>เลือก</h2>
+                            <div class="reason">
+                                <select name="reason" class="form-control" id="reason" [(ngModel)]="reason" placeholder="กรุณาเลือก">
+                                <option value="ลา">ลา</option>
+                                <option value="ป่วย">เปลี่ยนเวลา</option>
+                            </select>
+                            </div>
+                            <div class="sub-reason">
+                                <select name="" class="form-control " id="reason" *ngIf="reason=='ลา'">       
+                            <option value=""> ลาป่วย</option> 
+                            <option value=""> ลากิจ</option> 
+                            <option value=""> ลากิจชั่วโมง</option> 
+                            <option value=""> ลาคลอด</option> 
+                            <option value=""> ลาหยุดชดเชย</option> 
+                            <option value=""> ลาชั่วโมง OT</option> 
+                            <option value=""> ลาพักร้อน</option> 
+                            </select>
                             </div>
                         </div>
-                        <div class="name-list mx-auto ">
-                            <table class="table table-hover ">
-                                <thead>
-                                    <th class="text-center">ชื่อ-สกุล</th>
-                                    <th class="text-center">แผนก</th>
-                                    <th>เลือก</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Mr. bob</td>
-                                        <td class="text-center">Ibar</td>
-                                        <td>
-                                            <div><label for="name"><input name="name" type="checkbox"></label></div>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-6 note">
-                    <h2>หมายเหตุ</h2>
                     <div class="start d-flex">
                         <div class="date d-flex">
                             <label for="">วันที่</label>
@@ -398,25 +328,6 @@
                   </select> นาที
                         </div>
                     </div>
-
-                    <div class="reason-select  ">
-                        <h3>เหตุผล</h3>
-                        <div class="d-flex ">
-                            <div>
-                                <div class="checkbox"><input name="name" type="checkbox"><label for="name">ลาป่วย</label></div>
-                                <div class="checkbox"><label for="name"><input name="name" type="checkbox">ลากิจ</label></div>
-                                <div class="checkbox"><label for="name"><input name="name" type="checkbox">ลากิจชั่วโมง</label></div>
-                                <div class="checkbox"><label for="name"><input name="name" type="checkbox">ลาคลอด</label></div>
-                            </div>
-                            <div>
-
-                                <div class="checkbox"><label for="name"><input name="name" type="checkbox">ลาหยุดชดเชย</label></div>
-                                <div class="checkbox"><label for="name"><input name="name" type="checkbox">ลาชั่วโมง OT</label></div>
-                                <div class="checkbox"><label for="name"><input name="name" type="checkbox">ลาพักร้อน</label></div>
-                                <div class="checkbox"><label for="name"><input name="name" type="checkbox">เปลี่ยนแปลงเวลา</label></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="text-center">
@@ -425,7 +336,4 @@
             </div>
         </form>
     </div>
-
-
-
 </ion-content>
