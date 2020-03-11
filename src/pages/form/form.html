@@ -11,8 +11,6 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title text-center>ฟอร์ม</ion-title>
-    <button ion-button color="secondary" (click)="Addform()">
-      <ion-icon name="md-add-circle">เพิ่มฟอร์ม</ion-icon></button>
   </ion-navbar>
 </ion-row>
 </ion-header>
@@ -30,4 +28,9 @@
     <ion-title>ตรวจงานช่าง</ion-title>
     <ion-col col-2><img src="../../assets/imgs/doc1.png" style="height: 100px;width: 100px"> ตรวจหม้อน้ำ  </ion-col>
     </ion-card>
+
+    <ion-fab bottom right class="text-center" (click)="PresentAddfrom()">
+      <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+      <p>เพิ่มข้อมูล</p>
+  </ion-fab>
 </ion-content>
