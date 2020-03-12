@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ViewController, ModalController } 
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { AddmemberPage } from '../addmember/addmember';
 import { Member } from '../../models/Member';
+import { EmployeeholidayPage } from '../employeeholiday/employeeholiday';
 
 /**
  * Generated class for the PersoninfoPage page.
@@ -82,5 +83,8 @@ export class PersoninfoPage {
       }
     });
     modal.present();
+  }
+  PresentEmployeeHolidayPage(){
+    this.navCtrl.push(EmployeeholidayPage);
   }
 }
