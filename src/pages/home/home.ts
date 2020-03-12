@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Member, MemberLst } from '../../models/Member';
 import { PersoninfoPage } from '../personinfo/personinfo';
-import { AddmemberPage } from '../addmember/addmember';
 import { SalaryPage } from '../salary/salary';
 import { WorkgraphPage } from '../workgraph/workgraph';
+import { AddmemberPage } from '../addmember/addmember';
+
 
 
 
