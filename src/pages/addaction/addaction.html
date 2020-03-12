@@ -11,7 +11,7 @@
                 <div class="col-md-12">
                     <div class="d-flex person-select justify-content-center">
                         <h2>ชื่อ-สกุล</h2>
-                        <input class="form-control" type="text" placeholder="เลือกรายชื่อพนักงาน" (click)="presentModal()">
+                        <input class="form-control" type="text" placeholder="นายวรพุทธิ์ แสงชาติ" (click)="presentModal()">
                     </div>
                     <div class="col-md-12">
                         <div class="choice d-flex justify-content-center">
@@ -25,21 +25,21 @@
                                 </div>
                                 <div class="sub-reason">
                                     <select name="" class="form-control " id="reason" *ngIf="reason=='ลา'">       
-                                <option value=""> ลาป่วย</option> 
-                                <option value=""> ลากิจ</option> 
-                                <option value=""> ลากิจชั่วโมง</option> 
-                                <option value=""> ลาคลอด</option> 
-                                <option value=""> ลาหยุดชดเชย</option> 
-                                <option value=""> ลาชั่วโมง OT</option> 
-                                <option value=""> ลาพักร้อน</option> 
+                                <option value="1"> ลาป่วย</option> 
+                                <option value="1"> ลากิจ</option> 
+                                <option value="1"> ลากิจชั่วโมง</option> 
+                                <option value="1"> ลาคลอด</option> 
+                                <option value="1"> ลาหยุดชดเชย</option> 
+                                <option value="1"> ลาชั่วโมง OT</option> 
+                                <option value="1"> ลาพักร้อน</option> 
                             </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="date-time ">
+                <div class="col-md-12" >
+                    <div class="date-time">
                         <div class="datetime-picker-start d-flex justify-content-center">
                             <div>
                                 <label for="">จากวันที่</label><input type="date" class="date">
@@ -53,8 +53,8 @@
                             <label for="">เวลา</label><input type="time" class="time">
                         </div>
                         <div class="text-center btn-group">
-                            <button class="btn btn-primary">บันทึก</button>
-                            <button class="btn btn-danger">ยกเลิก</button>
+                            <button class="btn btn-primary" (click)="backtoworkgraph()">บันทึก</button>
+                            <button class="btn btn-danger" (click)="backtoworkgraph()">ยกเลิก</button>
                         </div>
                     </div>
                 </div>

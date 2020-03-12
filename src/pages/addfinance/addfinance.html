@@ -6,7 +6,7 @@
 -->
 <ion-header>
     <ion-navbar>
-        <ion-title>เพ่ิมข้อมูล</ion-title>
+        <ion-title>เพิ่มข้อมูล</ion-title>
     </ion-navbar>
 </ion-header>
 
@@ -29,7 +29,7 @@
                             <div class="reason">
                                 <select name="reason" class="form-control" id="reason" [(ngModel)]="reason" placeholder="กรุณาเลือก">
                                         <option value="credit">credit</option>
-                                        <option value="short">ลด short</option>
+                                        <option value="short">ตัดshort</option>
                                     </select>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
 
                 <div class="col-md-12">
                     <div class="choice d-flex justify-content-center">
-                        <h2 *ngIf="reason=='credit'">จากแผนก</h2>
+                        <h2 *ngIf="reason=='credit'">แผนก</h2>
                         <h2 *ngIf="reason=='short'">สาเหตุ</h2>
                         <div class="rs">
                             <div class="reason">
@@ -58,6 +58,11 @@
                                     <option value="11"> ดื่มเหล้า</option> 
                                     <option value="12"> ลืมสแกนลายนิ้วมือ</option> 
                                  </select>
+                                 <h2  class="choice d-flex justify-content-center" >วันที่ตัดshort</h2>  
+                                 <ion-item name="" class="form-control " id="reason" *ngIf="reason=='short'">
+                                    <ion-datetime displayFormat="DD MMM YYYY" >เลือกวันที่</ion-datetime>
+                                 </ion-item>
+                                
                             </div>
                         </div>
                     </div>
@@ -70,8 +75,8 @@
                 </div>
                 <div class="col-md-12">
                     <div class="text-center btn-group">
-                        <button class="btn btn-primary">บันทึก</button>
-                        <button class="btn btn-danger">ยกเลิก</button>
+                        <button class="btn btn-primary" (click)="backfinan()">บันทึก</button>
+                        <button class="btn btn-danger" (click)="backfinan()">ยกเลิก</button>
                     </div>
                 </div>
             </div>

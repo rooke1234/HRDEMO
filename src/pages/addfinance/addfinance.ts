@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { PersonsearchPage } from '../personsearch/personsearch';
+import { FinancePage } from '../finance/finance';
 
 /**
  * Generated class for the AddfinancePage page.
@@ -25,6 +26,9 @@ export class AddfinancePage {
   presentModal() {
     const modal = this.modalCtrl.create(PersonsearchPage);
     modal.present();
+  }
+  backfinan() {
+    this.navCtrl.push(FinancePage);
   }
 
 }
