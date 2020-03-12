@@ -19,6 +19,7 @@ import { WorktablePage } from '../pages/worktable/worktable';
 import { AddactionPage } from '../pages/addaction/addaction';
 import { WorkgraphPage } from '../pages/workgraph/workgraph';
 import { PersonsearchPage } from '../pages/personsearch/personsearch';
+import { AddfinancePage } from '../pages/addfinance/addfinance';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PersonsearchPage } from '../pages/personsearch/personsearch';
     WorktablePage,
     AddactionPage,
     WorkgraphPage,
-    PersonsearchPage
+    PersonsearchPage,
+    AddfinancePage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { PersonsearchPage } from '../pages/personsearch/personsearch';
     WorktablePage,
     AddactionPage,
     WorkgraphPage,
-    PersonsearchPage
+    PersonsearchPage,
+    AddfinancePage
   ],
   providers: [
     StatusBar,

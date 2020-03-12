@@ -15,6 +15,7 @@ import { AddmemberPage } from '../pages/addmember/addmember';
 import { WorktablePage } from '../pages/worktable/worktable';
 import { AddactionPage } from '../pages/addaction/addaction';
 import { WorkgraphPage } from '../pages/workgraph/workgraph';
+import { AddfinancePage } from '../pages/addfinance/addfinance';
 
 
 @Component({
@@ -23,7 +24,7 @@ import { WorkgraphPage } from '../pages/workgraph/workgraph';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AddactionPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
   department: Array<{title: string, list: any}>;

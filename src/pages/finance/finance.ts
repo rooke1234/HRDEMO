@@ -6,6 +6,7 @@ import { EmployeePage } from '../employee/employee';
 import { Title } from '@angular/platform-browser';
 import { ListPage } from '../list/list';
 import { Member, MemberLst } from '../../models/Member';
+import { AddfinancePage } from '../addfinance/addfinance';
 
 /**
  * Generated class for the FinancePage page.
@@ -90,6 +91,9 @@ export class FinancePage {
       }
     });
     modal.present();
+  }
+  AddNewStory(){
+    this.navCtrl.push(AddfinancePage);
   }
 }
 
