@@ -30,6 +30,7 @@
                     <th>รหัสพนักงาน</th>
                     <th>ชื่อ-สกุล</th>
                     <th class="text-center ">แผนก</th>
+                    <th class="text-center ">ตำแหน่ง</th>
                     <th class="text-center ">สาย</th>
                     <th class="text-center ">ลา</th>
                     <th class="text-center ">มา</th>
@@ -38,19 +39,169 @@
                         
                 </thead>
                 <tbody>
+                <th>Entertainment Manager</th>
+                </tbody>
+                <th> 0005</th>
+                        <th>นายเอนเตอร์ เทรนโรงแรม</th>
+                        <th class="text-center "> Entertainment Manager</th>
+                        <th class="text-center "> Entertainment Manager</th>
+                        <th class="text-center ">0</th>
+                        <th class="text-center ">0</th>
+                        <th class="text-center ">0</th>
+                        <th class="text-center ">0</th>
+                        <th class="text-center ">1</th>
+                <tbody>
 
                     <tr *ngFor="let member of members " (click)="PresentWorkGraphPage()">
-                        <th> {{ member._id }}</th>
+                        <td> {{ member._id }}</td>
                         <td>{{ member.tHName }}</td>
                         <td class="text-center "> {{ member.department }}</td>
-                        <td class="text-center ">2</td>
-                        <td class="text-center ">3</td>
-                        <td class="text-center ">5</td>
-                        <td class="text-center ">2</td>
-                        <td class="text-center ">7</td>
-                    </tr>
+                        <td class="text-center "> {{ member.function }}</td>
+                        <td class="text-center ">0</td>
+                        <td class="text-center ">1</td>
+                        <td class="text-center ">1</td>
+                        <td class="text-center ">1</td>
+                        <td class="text-center ">1</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                    <th>Human resources</th>
                 </tbody>
-
+                        <tbody> 
+                            <th> 0001</th>
+                            <th>นางทิพาวรรณ สยุมพร</th>
+                            <th class="text-center "> Human resources</th>
+                            <th class="text-center "> ฝ่ายบุคคล</th>
+                            <th class="text-center ">0</th>
+                            <th class="text-center ">0</th>
+                            <th class="text-center ">0</th>
+                            <th class="text-center ">0</th>
+                            <th class="text-center ">2</th>
+                        </tbody>
+                        <td> 0015</td>
+                        <td>นายสมศักดิ์ หมายปอง</td>
+                        <td class="text-center "> รปภ </td>
+                        <td class="text-center "> หัวหน้ารปภ</td>
+                        <td class="text-center ">1</td>
+                        <td class="text-center ">3</td>
+                        <td class="text-center ">4</td>
+                        <td class="text-center ">5</td>
+                        <td class="text-center ">3</td>
+                    <tbody>  
+                        <td> 0016</td>
+                        <td>นายสมศักดิ์ หมายปอง</td>
+                        <td class="text-center "> รปภ </td>
+                        <td class="text-center "> หัวหน้ารปภ</td>
+                        <td class="text-center ">0</td>
+                        <td class="text-center ">0</td>
+                        <td class="text-center ">0</td>
+                        <td class="text-center ">2</td>
+                        <td class="text-center ">1</td>
+                    </tbody>
+                    
+                    <tbody>
+                        <th>Resident Manager</th>
+                    </tbody>
+                            <tbody> 
+                                <th> 0003</th>
+                                <th>นายวีรเทพ</th>
+                                <th class="text-center ">Resident Manager</th>
+                                <th class="text-center ">Resident Manager</th>
+                                <th class="text-center ">0</th>
+                                <th class="text-center ">0</th>
+                                <th class="text-center ">0</th>
+                                <th class="text-center ">0</th>
+                                <th class="text-center ">1</th>
+                            </tbody>
+                            <td> 0020</td>
+                            <td>นายสมหมาย ชายปอง</td>
+                            <td class="text-center "> ช่าง </td>
+                            <td class="text-center "> หัวหน้าช่าง</td>
+                            <td class="text-center ">1</td>
+                            <td class="text-center ">1</td>
+                            <td class="text-center ">1</td>
+                            <td class="text-center ">1</td>
+                            <td class="text-center ">5</td>
+                        <tbody>  
+                            <td> 0020</td>
+                            <td>นางสาวอิงอร หอมหวาน</td>
+                            <td class="text-center "> front </td>
+                            <td class="text-center "> หัวหน้า front</td>
+                            <td class="text-center ">0</td>
+                            <td class="text-center ">0</td>
+                            <td class="text-center ">0</td>
+                            <td class="text-center ">1</td>
+                            <td class="text-center ">3</td>
+                        </tbody>
+                        <tbody>
+                            <th>Human resources</th>
+                        </tbody>
+                                <tbody> 
+                                    <th> 0001</th>
+                                    <th>นางทิพาวรรณ สยุมพร</th>
+                                    <th class="text-center "> Human resources</th>
+                                    <th class="text-center "> ฝ่ายบุคคล</th>
+                                    <th class="text-center ">0</th>
+                                    <th class="text-center ">0</th>
+                                    <th class="text-center ">0</th>
+                                    <th class="text-center ">0</th>
+                                    <th class="text-center ">2</th>
+                                </tbody>
+                                <td> 0015</td>
+                                <td>นายสมศักดิ์ หมายปอง</td>
+                                <td class="text-center "> รปภ </td>
+                                <td class="text-center "> หัวหน้ารปภ</td>
+                                <td class="text-center ">1</td>
+                                <td class="text-center ">3</td>
+                                <td class="text-center ">4</td>
+                                <td class="text-center ">5</td>
+                                <td class="text-center ">3</td>
+                            <tbody>  
+                                <td> 0016</td>
+                                <td>นายสมศักดิ์ หมายปอง</td>
+                                <td class="text-center "> รปภ </td>
+                                <td class="text-center "> หัวหน้ารปภ</td>
+                                <td class="text-center ">0</td>
+                                <td class="text-center ">0</td>
+                                <td class="text-center ">0</td>
+                                <td class="text-center ">2</td>
+                                <td class="text-center ">1</td>
+                            </tbody>
+                            
+                            <tbody>
+                                <th>Food & Beverage Manager</th>
+                            </tbody>
+                                    <tbody> 
+                                        <th> 0004</th>
+                                        <th>นายวีรเทพ</th>
+                                        <th class="text-center ">Food & Beverage Manager</th>
+                                        <th class="text-center ">Food & Beverage Manager</th>
+                                        <th class="text-center ">0</th>
+                                        <th class="text-center ">0</th>
+                                        <th class="text-center ">0</th>
+                                        <th class="text-center ">0</th>
+                                        <th class="text-center ">1</th>
+                                    </tbody>
+                                    <td> 0026</td>
+                                    <td>นายนคร เวหาร</td>
+                                    <td class="text-center "> ห้องครัว </td>
+                                    <td class="text-center "> หัวหน้าเชฟ</td>
+                                    <td class="text-center ">0</td>
+                                    <td class="text-center ">0</td>
+                                    <td class="text-center ">0</td>
+                                    <td class="text-center ">0</td>
+                                    <td class="text-center ">0</td>
+                                <tbody>  
+                                    <td> 0035</td>
+                                    <td>นางสาวขนม นมเนย</td>
+                                    <td class="text-center "> ห้องอาหาร </td>
+                                    <td class="text-center "> แคชเชียร์</td>
+                                    <td class="text-center ">0</td>
+                                    <td class="text-center ">0</td>
+                                    <td class="text-center ">0</td>
+                                    <td class="text-center ">1</td>
+                                    <td class="text-center ">3</td>
+                                </tbody>
             </table>
         </div>
     </div>

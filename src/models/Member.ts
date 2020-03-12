@@ -23,7 +23,7 @@ export class Member {
 export const MemberLst: Member[] =
     [
         {
-            _id: "0001",
+            _id: "0010",
             idNumber: "0123456789123",
             tHName: "นายกฤษณะ ตระกูลพรหม",
             department: "Ibar",
@@ -43,7 +43,7 @@ export const MemberLst: Member[] =
             salary2: "1,500",
         },
         {
-            _id: "0002",
+            _id: "0011",
             idNumber: "0123456789123",
             tHName: "นายวรพุทธิ์ แสงชาติ",
             department: "Standby",

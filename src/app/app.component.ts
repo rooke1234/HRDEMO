@@ -39,7 +39,8 @@ export class MyApp {
      // { title: 'เพิ่มพนักงาน', component: EmployeePage},
       { title: 'จัดการการเงิน', component: FinancePage },
       { title: 'จัดการเวลาการทำงาน', component: ActionPage},
-      { title: 'ดาวโหลดเอกสาร', component: FormPage }
+      { title: 'ดาวโหลดเอกสาร', component: FormPage },
+      { title: 'เงินกู้', component: FormPage }
     ];
 
     this.department = [
