@@ -35,7 +35,7 @@ page-addaction {
     }
     .choice {
         margin-top: 30px;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         width: 100%;
         h2 {
             margin-right: 20px;
@@ -48,6 +48,19 @@ page-addaction {
             height: 40px;
             color: #000;
             margin-bottom: 40px;
+        }
+    }
+    .datetime-picker-start {
+        padding: 10px;
+    }
+    .datetime-picker-start,
+    .datetime-picker-end {
+        label {
+            font-size: 20px;
+            padding-right: 10px;
+        }
+        input {
+            margin-right: 10px;
         }
     }
     .btn-group {
