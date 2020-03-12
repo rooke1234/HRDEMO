@@ -5,6 +5,7 @@ import { AddmemberPage } from '../addmember/addmember';
 import { Member } from '../../models/Member';
 import { HomePage } from '../home/home';
 import { DiEmdayoffPage } from '../di-emdayoff/di-emdayoff';
+import { EmployeeholidayPage } from '../employeeholiday/employeeholiday';
 
 /**
  * Generated class for the PersoninfoPage page.
@@ -136,4 +137,7 @@ export class PersoninfoPage {
     confirm.present();
   }
 
+  PresentEmployeeHolidayPage(){
+    this.navCtrl.push(EmployeeholidayPage);
+  }
 }

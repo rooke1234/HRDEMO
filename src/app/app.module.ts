@@ -20,6 +20,7 @@ import { AddactionPage } from '../pages/addaction/addaction';
 import { WorkgraphPage } from '../pages/workgraph/workgraph';
 import { PersonsearchPage } from '../pages/personsearch/personsearch';
 import { AddfinancePage } from '../pages/addfinance/addfinance';
+import { EmployeeholidayPage } from '../pages/employeeholiday/employeeholiday';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AddfinancePage } from '../pages/addfinance/addfinance';
     AddactionPage,
     WorkgraphPage,
     PersonsearchPage,
-    AddfinancePage
+    AddfinancePage,
+    EmployeeholidayPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { AddfinancePage } from '../pages/addfinance/addfinance';
     AddactionPage,
     WorkgraphPage,
     PersonsearchPage,
-    AddfinancePage
+    AddfinancePage,
+    EmployeeholidayPage
   ],
   providers: [
     StatusBar,
