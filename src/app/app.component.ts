@@ -23,7 +23,7 @@ import { WorkgraphPage } from '../pages/workgraph/workgraph';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = AddactionPage;
 
   pages: Array<{title: string, component: any}>;
   department: Array<{title: string, list: any}>;
@@ -34,11 +34,11 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'รายชื่อพนักงาน', component: HomePage },
-      { title: 'ตารางงาน', component: ListPage },
+      { title: 'ตารางการทำงาน', component: ListPage },
      // { title: 'เพิ่มพนักงาน', component: EmployeePage},
-      { title: 'การเงิน', component: FinancePage },
-      { title: 'Action', component: ActionPage},
-      { title: 'ฟอร์ม', component: FormPage }
+      { title: 'จัดการการเงิน', component: FinancePage },
+      { title: 'จัดการเวลาการทำงาน', component: ActionPage},
+      { title: 'ดาวโหลดเอกสาร', component: FormPage }
     ];
 
     this.department = [
