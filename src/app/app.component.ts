@@ -15,6 +15,7 @@ import { AddmemberPage } from '../pages/addmember/addmember';
 import { WorktablePage } from '../pages/worktable/worktable';
 import { AddactionPage } from '../pages/addaction/addaction';
 import { WorkgraphPage } from '../pages/workgraph/workgraph';
+import { AddfinancePage } from '../pages/addfinance/addfinance';
 
 
 @Component({
@@ -34,11 +35,11 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'รายชื่อพนักงาน', component: HomePage },
-      { title: 'ตารางงาน', component: ListPage },
+      { title: 'ตารางการทำงาน', component: ListPage },
      // { title: 'เพิ่มพนักงาน', component: EmployeePage},
-      { title: 'เครดิต', component: FinancePage },
-      { title: 'Action', component: ActionPage},
-      { title: 'ฟอร์ม', component: FormPage }
+      { title: 'จัดการการเงิน', component: FinancePage },
+      { title: 'จัดการเวลาการทำงาน', component: ActionPage},
+      { title: 'ดาวโหลดเอกสาร', component: FormPage }
     ];
 
     this.department = [

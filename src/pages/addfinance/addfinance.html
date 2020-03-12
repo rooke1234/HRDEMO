@@ -1,0 +1,81 @@
+<!--
+  Generated template for the AddfinancePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>เพ่ิมข้อมูล</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="main-content time-manage mx-auto">
+        <form action="">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="d-flex person-select justify-content-center">
+                        <h2>ชื่อ-สกุล</h2>
+                        <input class="form-control" type="text" placeholder="เลือกรายชื่อพนักงาน" (click)="presentModal()">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="choice d-flex justify-content-center">
+                        <h2>เลือก</h2>
+                        <div class="rs">
+                            <div class="reason">
+                                <select name="reason" class="form-control" id="reason" [(ngModel)]="reason" placeholder="กรุณาเลือก">
+                                        <option value="credit">credit</option>
+                                        <option value="short">ลด short</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="choice d-flex justify-content-center">
+                        <h2 *ngIf="reason=='credit'">จากแผนก</h2>
+                        <h2 *ngIf="reason=='short'">สาเหตุ</h2>
+                        <div class="rs">
+                            <div class="reason">
+                                <select name="" class="form-control " id="reason" *ngIf="reason=='credit'">       
+                                    <option value="1"> ห้องอาหาร</option> 
+                                    <option value="2"> สนุกเกอร์</option> 
+                                    <option value="3"> Fresh mart</option> 
+                                    <option value="4"> นวด</option> 
+                                    <option value="5"> Stand by</option> 
+                                    <option value="6"> Ibar</option> 
+                                    <option value="7"> คาราโอเกะ</option> 
+                                 </select>
+                                <select name="" class="form-control " id="reason" *ngIf="reason=='short'">       
+                                    <option value="8"> ขาดงาน</option> 
+                                    <option value="9"> เล่นมือถือ</option> 
+                                    <option value="10"> นอนหลับ</option> 
+                                    <option value="11"> ดื่มเหล้า</option> 
+                                    <option value="12"> ลืมสแกนลายนิ้วมือ</option> 
+                                 </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="d-flex person-select justify-content-center">
+                        <h2>เป็นเงิน</h2>
+                        <input class="form-control" type="number" placeholder="ใส่จำนวนเงิน">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-center btn-group">
+                        <button class="btn btn-primary">บันทึก</button>
+                        <button class="btn btn-danger">ยกเลิก</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</ion-content>

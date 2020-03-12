@@ -1,4 +1,4 @@
-page-addaction {
+page-addfinance {
     .scroll-content {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -35,7 +35,6 @@ page-addaction {
     }
     .choice {
         margin-top: 30px;
-        margin-bottom: 40px;
         width: 100%;
         h2 {
             margin-right: 20px;
@@ -47,7 +46,23 @@ page-addaction {
             width: 400px;
             height: 40px;
             color: #000;
-            margin-bottom: 40px;
+        }
+        .sub-reason {
+            margin-top: 10px;
+        }
+    }
+    .date-time {
+        margin-top: 10px;
+        label {
+            font-size: 20px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        input {
+            width: 200px;
+        }
+        .datetime-picker-start {
+            padding: 20px 0;
         }
     }
     .btn-group {

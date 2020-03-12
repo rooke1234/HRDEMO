@@ -6,6 +6,7 @@ import { EmployeePage } from '../employee/employee';
 import { Title } from '@angular/platform-browser';
 import { ListPage } from '../list/list';
 import { Member, MemberLst } from '../../models/Member';
+import { AddfinancePage } from '../addfinance/addfinance';
 
 /**
  * Generated class for the FinancePage page.
@@ -91,18 +92,8 @@ export class FinancePage {
     });
     modal.present();
   }
-
-  Addfinancial(member: Member){
-    const modal = this.modalCtrl.create("MembercardPage", { member: member });
-    modal.onDidDismiss(data => {
-      if (data) {
-        let member = data.value;
-        var index = this.members.findIndex(it => it._id == member._id);
-        this.members[index] = member;
-      }
-    });
-    modal.present();
+  AddNewStory(){
+    this.navCtrl.push(AddfinancePage);
   }
-  
 }
 
