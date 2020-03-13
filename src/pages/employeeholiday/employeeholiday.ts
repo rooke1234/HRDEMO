@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,AlertController, ShowWhen } from 'ionic-angular';
 import { text } from '@angular/core/src/render3/instructions';
 import { removeDebugNodeFromIndex } from '@angular/core/src/debug/debug_node';
 

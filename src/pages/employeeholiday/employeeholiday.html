@@ -13,7 +13,11 @@
 <ion-content padding>
     <!-- <img src="../../assets/imgs/calendar.png" alt=""> -->
     <ionic-calendar-date-picker (onSelect)="dateSelected($event)" 
-    [itemSelectedStyle]="{'color': 'red', 'font-weight': 'bold'}">
+    [itemSelectedStyle]="{'color': 'red', 'font-weight': 'bold'}"
+    [todaysItemStyle]="{'color': 'green',  'font-size': '20px'}"
+    [dayLabelsStyle]="{'color': 'blue', 'font-weight': 'bold','font-size': '20px'}"
+    [backgroundStyle]="{ 'background-color': '#B6DEF7'}"
+    >
     </ionic-calendar-date-picker>
     
        
