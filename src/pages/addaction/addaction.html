@@ -20,22 +20,21 @@
                                 <div class="reason">
                                     <select name="reason" class="form-control" id="reason" [(ngModel)]="reason" placeholder="กรุณาเลือก">
                                 <option value="ลา">ลา</option>
-                                <option value="เปลี่ยน">เปลี่ยนแปลงเวลา</option>
+                                <option value="ป่วย">เปลี่ยนเวลา</option>
                             </select>
-                            </div>
-                            <div class="sub-reason">
-                                <select name="sub-reason" class="form-control " id="reason" *ngIf="reason=='ลา'">       
-                            <option value="ลาป่วย"> ลาป่วย</option> 
-                            <option value="ลากิจ"> ลากิจ</option> 
-                            <option value="ลากิจชั่วโมง"> ลากิจชั่วโมง</option> 
-                            <option value="ลาคลอด"> ลาคลอด</option> 
-                            <option value="ลาหยุดชดเชย"> ลาหยุดชดเชย</option> 
-                            <option value="OT"> ลาชั่วโมง OT</option> 
-                            <option value="ลาพักร้อน"> ลาพักร้อน</option> 
+                                </div>
+                                <div class="sub-reason">
+                                    <select name="" class="form-control " id="reason" *ngIf="reason=='ลา'">       
+                                <option value="1"> ลาป่วย</option> 
+                                <option value="1"> ลากิจ</option> 
+                                <option value="1"> ลากิจชั่วโมง</option> 
+                                <option value="1"> ลาคลอด</option> 
+                                <option value="1"> ลาหยุดชดเชย</option> 
+                                <option value="1"> ลาชั่วโมง OT</option> 
+                                <option value="1"> ลาพักร้อน</option> 
                             </select>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -60,11 +59,6 @@
                     </div>
                 </div>
             </div>
-    </div>
-    <div class="text-center">
-        <button class="btn btn-primary" (click)="toworkgraph()">บันทึก</button>
-        <button class="btn btn-danger">ยกเลิก</button>
-    </div>
-    </form>
+        </form>
     </div>
 </ion-content>
