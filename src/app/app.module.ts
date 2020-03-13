@@ -21,6 +21,7 @@ import { WorkgraphPage } from '../pages/workgraph/workgraph';
 import { PersonsearchPage } from '../pages/personsearch/personsearch';
 import { AddfinancePage } from '../pages/addfinance/addfinance';
 import { EmployeeholidayPage } from '../pages/employeeholiday/employeeholiday';
+import { DatePickerModule } from 'ionic-calendar-date-picker';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { EmployeeholidayPage } from '../pages/employeeholiday/employeeholiday';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    DatePickerModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

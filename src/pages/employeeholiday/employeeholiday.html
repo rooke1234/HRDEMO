@@ -11,5 +11,12 @@
 </ion-header>
 
 <ion-content padding>
-    <img src="../../assets/imgs/calendar.png" alt="">
+    <!-- <img src="../../assets/imgs/calendar.png" alt=""> -->
+    <ionic-calendar-date-picker (onSelect)="dateSelected($event)" 
+    [itemSelectedStyle]="{'color': 'red', 'font-weight': 'bold'}">
+    </ionic-calendar-date-picker>
+    
+       
+    	
+    
 </ion-content>
