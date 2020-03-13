@@ -37,6 +37,9 @@ export class AddactionPage {
     const modal = this.modalCtrl.create(PersonsearchPage);
     modal.present();
   }
+  toworkgraph() {
+    this.navCtrl.push(WorkgraphPage);
+  }
 
   backtoworkgraph() {
     this.navCtrl.push(WorkgraphPage);

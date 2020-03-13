@@ -1,8 +1,26 @@
 page-addaction {
-    .scroll-content {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        background: rgb(209, 206, 206);
+    .addaction {
+        margin: 0 auto;
+        width: 50%;
+        .choice {
+            padding-top: 30px;
+            select {
+                height: 40px;
+                font-size: 14px;
+                color: black;
+                font-weight: bold;
+            }
+            .reason {
+                margin-bottom: 20px;
+            }
+            option {
+                font-size: px;
+            }
+            .sub-reason {
+                padding: 10px 0;
+            }
+            
+        }
     }
     .time-manage {
         height: 100%;
