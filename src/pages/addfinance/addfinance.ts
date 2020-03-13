@@ -26,5 +26,8 @@ export class AddfinancePage {
     const modal = this.modalCtrl.create(PersonsearchPage);
     modal.present();
   }
+  backfinan() {
+    this.navCtrl.pop();
+  }
 
 }

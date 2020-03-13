@@ -36,5 +36,10 @@ export class AddactionPage {
     const modal = this.modalCtrl.create(PersonsearchPage);
     modal.present();
   }
+  
+
+  backtoaction() {
+    this.navCtrl.pop();
+  }
 
 }
