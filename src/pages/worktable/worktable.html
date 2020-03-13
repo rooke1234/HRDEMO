@@ -1,9 +1,3 @@
-<!--
-  Generated template for the WorktablePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
     <ion-navbar>
         <ion-title>ตารางA</ion-title>
@@ -36,11 +30,10 @@
                 <p>21:00</p>
             </div>
             <div class="graph d-flex ">
-                <div class="time time1 text-center">
-                    <p> เวลาทำงานจริง</p>
-                </div>
-                <div class="time time2 text-center">
-                    <p> OT</p>
+                <div class="progress time time1 ">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:69%">
+                        <p> เวลาทำงานจริง</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,12 +58,8 @@
                         <td>บัญชี</td>
                         <td>ทุกวันจันทร์</td>
                     </tr>
-                    
-
                 </tbody>
             </table>
         </div>
     </div>
-
-
 </ion-content>
