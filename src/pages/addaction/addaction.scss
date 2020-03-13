@@ -19,7 +19,6 @@ page-addaction {
             .sub-reason {
                 padding: 10px 0;
             }
-            
         }
     }
     .time-manage {
@@ -49,6 +48,12 @@ page-addaction {
             width: 400px;
             height: 40px;
             font-size: 18px;
+            border-radius: 10px 0px 0px 10px;
+        }
+        button {
+            width: 70px;
+            font-size: 20px;
+            border-radius: 0px 10px 10px 0px;
         }
     }
     .choice {
