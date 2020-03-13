@@ -6,6 +6,7 @@ import { PersonsearchPage } from '../personsearch/personsearch';
 import { MembercardPage } from '../membercard/membercard';
 import { PersoninfoPageModule } from '../personinfo/personinfo.module';
 import { WorkgraphPage } from '../workgraph/workgraph';
+import { ActionPage } from '../action/action';
 
 /**
  * Generated class for the AddactionPage page.
@@ -37,12 +38,10 @@ export class AddactionPage {
     const modal = this.modalCtrl.create(PersonsearchPage);
     modal.present();
   }
-  toworkgraph() {
-    this.navCtrl.push(WorkgraphPage);
-  }
+  
 
-  backtoworkgraph() {
-    this.navCtrl.push(WorkgraphPage);
+  backtoaction() {
+    this.navCtrl.push(ActionPage);
   }
 
 }
