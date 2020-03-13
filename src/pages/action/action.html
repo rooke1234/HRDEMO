@@ -21,7 +21,7 @@
                     <th>หมายเหตุ</th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let member of members,let i =index">
+                    <tr *ngFor="let member of members,let i =index" (click)="PresentWorkGrapPage()">
                         <!-- <td>{{i+1}}</td> -->
                         <td>
                             {{ member.tHName }}

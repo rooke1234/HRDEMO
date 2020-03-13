@@ -4,6 +4,7 @@ import { ListPage } from '../list/list';
 import { AlertController } from 'ionic-angular';
 import { Member, MemberLst } from '../../models/Member';
 import { AddactionPage } from '../addaction/addaction';
+import { WorkgraphPage } from '../workgraph/workgraph';
 
 /**
  * Generated class for the ActionPage page.
@@ -131,6 +132,9 @@ export class ActionPage {
   }
   PresentAddActionPage(){
     this.navCtrl.push(AddactionPage);
+  }
+  PresentWorkGrapPage(){
+    this.navCtrl.push(WorkgraphPage);
   }
 
 }

@@ -41,7 +41,7 @@ export class AddactionPage {
   
 
   backtoaction() {
-    this.navCtrl.push(ActionPage);
+    this.navCtrl.pop();
   }
 
 }

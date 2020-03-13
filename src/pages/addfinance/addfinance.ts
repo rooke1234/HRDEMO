@@ -28,7 +28,7 @@ export class AddfinancePage {
     modal.present();
   }
   backfinan() {
-    this.navCtrl.push(FinancePage);
+    this.navCtrl.pop();
   }
 
 }
